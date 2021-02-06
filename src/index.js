@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Landing from './Landing';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './index.css';
+import './index.scss';
 
 
 ReactDOM.render(<Router><Landing /></Router>, document.getElementById('root'));

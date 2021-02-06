@@ -1,0 +1,24 @@
+@import './responsive';
+.about-content {
+  text-align: center;
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    padding-top: 2vh;
+    font-size: 1.4em;
+    @media #{$extra-small-screen}  {
+      font-size: 1em;
+    }
+    line-height: 2;
+    text-align: left;
+
+  }
+  img {
+    float: right;
+    max-height: 20vh;
+    justify-content: right;
+    border-radius: 77.279px;
+    margin-bottom: 6vh;
+  }
+}

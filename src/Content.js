@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
-import './Content.scss';
+import React, { useRef } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import Icons from './components/Icons';
+import About from './About'
+import Education from './Education';
+import Experience from './Experience';
+import './Content.scss';
 
 const rightCaret = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -15,23 +18,25 @@ const rightCaret = (
 const LeftMenuItem = ({ setCurrent, children, current }) => (
   <Link className="left-menu-item" to={`/content/${children.toLowerCase()}`} replace>
     { current === children.toLowerCase() && rightCaret }
-    {children}
+    <p>{children}</p>
   </Link>
 );
 
 const Content = () => {
+  const lastContent = useRef('about');
   const onContentPage = useRouteMatch('/content/:current');
-  const { current } = onContentPage?.params || { current: 'about' };
+  const { current } = onContentPage?.params || { current: lastContent.current };
+  lastContent.current = current;
   let content;
   switch (current) {
     case 'about':
-      content = (<> about me yolo 123 </>);
+      content = (<About />);
       break;
     case 'education':
-      content = (<> me wecomandayshuns </>);
+      content = (<Education />);
       break;
     case 'experience':
-      content = (<> experience </>);
+      content = (<Experience />);
       break;
     case 'skills':
       content = (<> skills </>);
@@ -57,24 +62,28 @@ const Content = () => {
   return (
     <div className="content">
       <div className="left-menu">
-        <h2>Jill Wang</h2>
-        <svg id="line" width="100%" height="24" viewBox="0 0 300 24">
-          <path d="M 0 10 H 300" stroke="#606060"/>
-        </svg>
-        <LeftMenuItem current={current}>About</LeftMenuItem>
-        <LeftMenuItem current={current}>Education</LeftMenuItem>
-        <LeftMenuItem current={current}>Experience</LeftMenuItem>
-        <LeftMenuItem current={current}>Skills</LeftMenuItem>
-        <LeftMenuItem current={current}>Recommendations</LeftMenuItem>
-        <LeftMenuItem current={current}>Projects</LeftMenuItem>
-        <LeftMenuItem current={current}>Volunteering</LeftMenuItem>
-        <LeftMenuItem current={current}>Awards</LeftMenuItem>
-        <LeftMenuItem current={current}>Resume</LeftMenuItem>
+        <h2 className="left-menu-header">Jill Wang</h2>
+        <div className="hline" />
+        <div className="left-menu-list-container">
+          <div className="left-menu-list">
+            <LeftMenuItem current={current}>About</LeftMenuItem>
+            <LeftMenuItem current={current}>Education</LeftMenuItem>
+            <LeftMenuItem current={current}>Experience</LeftMenuItem>
+            <LeftMenuItem current={current}>Skills</LeftMenuItem>
+            <LeftMenuItem current={current}>Recommendations</LeftMenuItem>
+            <LeftMenuItem current={current}>Projects</LeftMenuItem>
+            <LeftMenuItem current={current}>Volunteering</LeftMenuItem>
+            <LeftMenuItem current={current}>Awards</LeftMenuItem>
+            <LeftMenuItem current={current}>Resume</LeftMenuItem>
+          </div>
+        </div>
         <Icons />
-        <p> &copy; 2021 Jill Yu Chieh Wang</p>
+        <p className="left-menu-footer"> &copy; 2021 Jill Yu Chieh Wang</p>
       </div>
-      <div className="about-content">
-        {content}
+      <div className="content-main">
+        <div className="frame">
+          {content}
+        </div>
       </div>
     </div>
   );

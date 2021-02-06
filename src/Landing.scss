@@ -7,18 +7,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  //font-size: calc(10px + 2vmin);
   text-align: center;
   padding-left: 5vw;
   padding-right: 5vw;
   background-color: white;
   z-index: 1;
-
-  transition: transform ease-in-out 500ms;
+  h1 {
+    font-family: 'Syncopate';
+  }
+  transition: transform ease-in-out 300ms;
 
   &.showing-next {
     transform: translateY(-100%);
     pointer-events: none;
+  }
+
+  .icons {
+    padding-top: 40px;
   }
 }
 
@@ -29,7 +35,7 @@
 .icons {
   display: flex;
   flex-direction: row;
-  padding-top: 2vh;
+  justify-content: space-evenly;
   outline: none;
 }
 
