@@ -16,9 +16,12 @@
   }
   img {
     float: right;
-    max-height: 20vh;
+    max-height: 200px;
     justify-content: right;
     border-radius: 77.279px;
-    margin-bottom: 6vh;
+    margin-bottom: 20px;
+    @media #{$extra-small-screen}  {
+      justify-content: center;
+    }
   }
 }

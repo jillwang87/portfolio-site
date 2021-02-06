@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
+import classNames from 'classnames';
 import Icons from './components/Icons';
 import About from './About'
 import Education from './Education';
@@ -15,8 +16,8 @@ const rightCaret = (
   </svg>
 );
 
-const LeftMenuItem = ({ setCurrent, children, current }) => (
-  <Link className="left-menu-item" to={`/content/${children.toLowerCase()}`} replace>
+const LeftMenuItem = ({ onClick, children, current }) => (
+  <Link className="left-menu-item" to={`/content/${children.toLowerCase()}`} replace onClick={onClick}>
     { current === children.toLowerCase() && rightCaret }
     <p>{children}</p>
   </Link>
@@ -27,6 +28,8 @@ const Content = () => {
   const onContentPage = useRouteMatch('/content/:current');
   const { current } = onContentPage?.params || { current: lastContent.current };
   lastContent.current = current;
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
   let content;
   switch (current) {
     case 'about':
@@ -61,20 +64,29 @@ const Content = () => {
   }
   return (
     <div className="content">
-      <div className="left-menu">
-        <h2 className="left-menu-header">Jill Wang</h2>
+      <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className="menu-button-hline" />
+        <div className="menu-button-hline" />
+        <div className="menu-button-hline" />
+      </button>
+      <div className={classNames('overlay', menuOpen && 'visible')} onClick={closeMenu} />
+      <div className={classNames('left-menu', menuOpen && 'open')}>
+        <div className="left-menu-and-header" onClick={closeMenu}>
+          <h2 className="left-menu-header">Jill Wang</h2>
+        </div>
+
         <div className="hline" />
         <div className="left-menu-list-container">
           <div className="left-menu-list">
-            <LeftMenuItem current={current}>About</LeftMenuItem>
-            <LeftMenuItem current={current}>Education</LeftMenuItem>
-            <LeftMenuItem current={current}>Experience</LeftMenuItem>
-            <LeftMenuItem current={current}>Skills</LeftMenuItem>
-            <LeftMenuItem current={current}>Recommendations</LeftMenuItem>
-            <LeftMenuItem current={current}>Projects</LeftMenuItem>
-            <LeftMenuItem current={current}>Volunteering</LeftMenuItem>
-            <LeftMenuItem current={current}>Awards</LeftMenuItem>
-            <LeftMenuItem current={current}>Resume</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>About</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Education</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Experience</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Skills</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Recommendations</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Projects</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Volunteering</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Awards</LeftMenuItem>
+            <LeftMenuItem current={current} onClick={closeMenu}>Resume</LeftMenuItem>
           </div>
         </div>
         <Icons />

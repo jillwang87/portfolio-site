@@ -10,8 +10,8 @@ function Card ({ head, bottom, children, makeFlip }) {
         flipDirection="vertically"
         style={{
           paddingTop: '20px',
-          width: '40vh',
-          height: '55vh'
+          width: '400px',
+          height: '500px'
         }}
       >
         <FrontSide
@@ -19,14 +19,19 @@ function Card ({ head, bottom, children, makeFlip }) {
           style={{ backgroundColor: '#FFFFFF'}}
         >
           { head }
-          <svg id="line" width="100%" height="24" viewBox="0 0 300 24">
-            <path d="M 0 0 H 300" stroke="#606060"/>
-          </svg>
+          <div className="hline"
+          style={{
+            height: '1px',
+            backgroundColor: '#808080',
+            width: '100%',
+            marginBottom: '12px',
+            flexShrink: 0,
+          }}/>
           { bottom }
         </FrontSide>
         <BackSide
           animationDuration={300}
-          style={{ backgroundColor: '#FFFFFF'}}>
+          style={{ backgroundColor: '#FFFFFF', overflowY: 'auto' }}>
           <div className="back">
             {children}
           </div>

@@ -11,24 +11,88 @@
   display: grid;
   grid-template-areas: "left-menu content";
   grid-template-columns: auto 2fr;
-
-  .left-menu-header {
-    font-family: 'Syncopate';
-    text-align: center;
-    font-size: 24px;
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #c28285;
+    z-index: 20;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .menu-button-hline {
+      height: 2px;
+      background-color: black;
+      width: 20px;
+      margin: 2px;
+    }
   }
   .left-menu-footer {
     font-family: 'Syncopate';
     color: #404040;
     font-size: 1em;
   }
+
+  .hamburger-button {
+
+  }
+
+  .overlay {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, black, #c28285);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity ease-in-out 200ms;
+
+    &.visible {
+      opacity: .6;
+      pointer-events: auto;
+    }
+  }
+
   .left-menu {
     grid-area: left-menu;
-    @media #{$small-screen}  {
+    .left-menu-and-header {
+      display: flex;
+      flex-direction: row;
+      //justify-content: space-evenly;
+      .left-menu-header {
+        font-family: 'Syncopate';
+        text-align: center;
+        font-size: 24px;
+        margin-left: 30px;
+      }
+    }
+    button {
       display: none;
     }
     @media #{$large-screen}  {
-      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      transition: transform ease-in-out 200ms;
+      z-index: 11;
+
+      &.open {
+        transform: translateX(0);
+      }
+      button {
+        display: block;
+      }
     }
 
     .hline {
@@ -111,19 +175,23 @@
 
   .content-main {
     grid-area: content;
-    margin: 24px;
-    @media #{$small-screen} {
-      margin: 10px;
+    margin: 40px;
+    @media #{$large-screen} {
+      margin: 0px;
     }
     overflow-y: scroll;
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
     background-color: white;
     .frame {
-      padding: 24px;
+      padding: 40px;
       align-items: center;
       justify-content: center;
-      min-width: 100%;
+
+      @media #{$small-screen} {
+        margin: 30px;
+      }
     }
   }
 }

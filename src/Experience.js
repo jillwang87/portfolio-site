@@ -13,8 +13,8 @@ const CardHeader  = ({ src, text }) => (
 
 const CardFooter = ({ text, subtext }) => (
   <div className='bottom'>
-    <p style={{ fontSize: '3vmin' }}>{text}</p>
-    <p style={{ fontSize: '2vmin' }}>{subtext}</p>
+    <p style={{ fontSize: '1.7em' }}>{text}</p>
+    <p style={{ fontSize: '1.4em' }}>{subtext}</p>
   </div>
 );
 
@@ -29,7 +29,7 @@ function Experience () {
           bottom={<CardFooter text="Data Scientist & Software Developer" subtext="Jun 2019 - Aug 2019" />}
           makeFlip={ true }
         >
-          <dl style={{ fontSize: '1.5vmin', width: '90%', lineHeight: 1.7}}>
+          <dl>
             <dd>
               - Developed an unsupervised Holt Winter model on time series data and a supervised XGBoost model
               on multivariate data, both for the purpose of performing financial behaviour anomaly detection
@@ -53,7 +53,7 @@ function Experience () {
           bottom={<CardFooter text="Software Developer" subtext="Jun 2019 - Aug 2019" />}
           makeFlip={true}
         >
-          <dl style={{ fontSize: '1.5vmin', width: '90%', lineHeight: 1.7}}>
+          <dl>
             <dd>
               - Developed a website with the UI/UX team
             </dd>
