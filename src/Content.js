@@ -8,6 +8,7 @@ import Experience from './Experience';
 import closeIcon from './images/close.png'
 import './Content.scss';
 import Skills from './Skills';
+import Recommendations from './Recommendations';
 
 const rightCaret = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -47,7 +48,7 @@ const Content = () => {
       content = (<Skills />);
       break;
     case 'recommendations':
-      content = (<> recommendationse </>);
+      content = (<Recommendations />);
       break;
     case 'projects':
       content = (<> projects </>);

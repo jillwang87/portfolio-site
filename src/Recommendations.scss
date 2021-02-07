@@ -1,0 +1,43 @@
+@import "responsive";
+
+.recom-content {
+  text-align: center;
+  h1 {
+    @media #{$extra-small-screen} {
+      font-size: 25px;
+    }
+  }
+  .recom-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .card {
+      margin: 30px;
+      width: 800px;
+      @media #{$extra-small-screen} {
+        margin: 10px;
+      }
+      .recom-card-head {
+        p {
+          font-size: 1.6em;
+          @media #{$extra-small-screen} {
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      .recom-card-bottom {
+        #text {
+          font-size: 1.2em;
+          @media #{$extra-small-screen} {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+

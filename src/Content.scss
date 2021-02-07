@@ -77,6 +77,14 @@
 
   .left-menu {
     grid-area: left-menu;
+    padding: 24px 48px;
+    justify-content: center;
+    background-color: white;
+
+    opacity: 50%;
+    display: flex;
+    flex-direction: column;
+
     .left-menu-header {
       font-family: 'Syncopate';
       text-align: center;
@@ -107,11 +115,7 @@
       flex-shrink: 0;
     }
 
-    padding: 24px 48px;
-    justify-content: center;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+
 
     .left-menu-list-container {
       overflow-y: auto;
