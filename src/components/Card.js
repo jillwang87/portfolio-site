@@ -8,11 +8,7 @@ function Card ({ head, bottom, children, makeFlip }) {
         flipOnHover={ makeFlip }
         flipOnClick={ makeFlip }
         flipDirection="vertically"
-        style={{
-          paddingTop: '20px',
-          width: '400px',
-          height: '500px'
-        }}
+        className="experience-card"
       >
         <FrontSide
           animationDuration={300}

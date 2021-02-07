@@ -1,42 +1,19 @@
-@import './responsive';
-
-.experience-content {
-  text-align: center;
-  h1 {
-    padding-top: 0;
-  }
-  dl {
-    font-size: 1.3em;
-    width: 90%;
-    line-height: 1.7;
-    text-align: left;
-  }
-}
-.flippy-cardContainer {
-  min-height: 450px;
-}
-
+@import "responsive";
 .card {
   margin: 30px;
   width: 400px;
   @media #{$extra-small-screen} {
     margin:10px;
   }
-  .experience-card-bottom {
-    #text{
-      font-size: 1.7em;
+  .skills-card-bottom {
+    #text {
+      font-size: 1.4em;
       @media #{$extra-small-screen} {
-        font-size: 1.8em;
-      }
-    }
-    #subtext {
-      font-size: 1.5em;
-      @media #{$extra-small-screen} {
-        font-size: 1.5em;
+        font-size: 1em;
       }
     }
   }
-  .experience-card-head {
+  .skills-card-head {
     p {
       font-size: 2em;
       @media #{$extra-small-screen} {
@@ -44,6 +21,7 @@
       }
     }
   }
+
 
   img {
     max-width: 100px;

@@ -10,9 +10,6 @@ body {
   user-select: none;
 }
 
-h4 {
-  color: #303030;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -27,4 +24,7 @@ code {
   outline: none;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
 

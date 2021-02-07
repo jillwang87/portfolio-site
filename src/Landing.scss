@@ -1,3 +1,4 @@
+@import "responsive";
 .hero {
   font-family: 'Syncopate';
   grid-row: 1 / 1;
@@ -7,14 +8,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  //font-size: calc(10px + 2vmin);
   text-align: center;
-  padding-left: 5vw;
-  padding-right: 5vw;
   background-color: white;
   z-index: 1;
   h1 {
     font-family: 'Syncopate';
+  }
+  h4 {
+    color: #303030;
+  }
+  h6 {
+    font-size: 20px;
+    @media #{$extra-small-screen} {
+      font-size: 15px;
+    }
   }
   transition: transform ease-in-out 300ms;
 
@@ -25,7 +32,23 @@
 
   .icons {
     padding-top: 40px;
+    .icon {
+      img {
+        height: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+        transition: transform ease-in-out 100ms;
+        @media #{$extra-small-screen} {
+          height: 50px;
+        }
+        &:hover {
+          transform: translateY(-0.5vh);
+          filter: invert(67%) sepia(10%) saturate(1206%) hue-rotate(308deg) brightness(83%) contrast(93%);
+        }
+      }
+    }
   }
+
 }
 
 .page-content {
@@ -49,28 +72,15 @@
 
 }
 
-.icon {
-  img {
-    height: 10vmin;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-    transition: transform ease-in-out 100ms;
-    &:hover {
-      transform: translateY(-0.5vh);
-    }
-  }
-}
-
 .enter {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   img {
-    padding-top: 3vh;
     animation: MoveUpDown 1s linear infinite;
-    max-height: 5vh;
+    max-height: 30px;
   }
-  padding-top: 15vh;
+  padding-top: 60px;
   text-decoration: none;
   color: black;
 }

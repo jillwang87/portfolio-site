@@ -26,7 +26,7 @@ function Landing() {
   const onContentPage = useRouteMatch('/content');
   return (
     <div className="page-content">
-      <Hero showingNextPage={!!onContentPage} />
+      <Hero showingNextPage={onContentPage} />
       <Content />
     </div>
   );

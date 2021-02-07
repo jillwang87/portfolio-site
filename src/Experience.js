@@ -5,16 +5,16 @@ import Card from './components/Card';
 import './Experience.scss'
 
 const CardHeader  = ({ src, text }) => (
-  <div className='head'>
+  <div className='experience-card-head'>
     <img src={src} />
     <p>{text}</p>
   </div>
 );
 
 const CardFooter = ({ text, subtext }) => (
-  <div className='bottom'>
-    <p style={{ fontSize: '1.7em' }}>{text}</p>
-    <p style={{ fontSize: '1.4em' }}>{subtext}</p>
+  <div className='experience-card-bottom'>
+    <p id="text">{text}</p>
+    <p id="subtext">{subtext}</p>
   </div>
 );
 

@@ -5,7 +5,9 @@ import Icons from './components/Icons';
 import About from './About'
 import Education from './Education';
 import Experience from './Experience';
+import closeIcon from './images/close.png'
 import './Content.scss';
+import Skills from './Skills';
 
 const rightCaret = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -42,7 +44,7 @@ const Content = () => {
       content = (<Experience />);
       break;
     case 'skills':
-      content = (<> skills </>);
+      content = (<Skills />);
       break;
     case 'recommendations':
       content = (<> recommendationse </>);
@@ -62,19 +64,31 @@ const Content = () => {
     default:
       throw new Error(`Unexpected current content item: ${current}`);
   }
+
   return (
     <div className="content">
-      <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-        <div className="menu-button-hline" />
-        <div className="menu-button-hline" />
-        <div className="menu-button-hline" />
-      </button>
+      { !!onContentPage && (
+        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+          { menuOpen ?
+            (
+              <div className="close" style={{ fontSize: '30px'}}>
+                <svg width='40' height='40' viewBox="0 0 40 40">
+                  <path className="close-icon" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                </svg>
+              </div>
+            ) : (
+              <div>
+                <div className="menu-button-hline" />
+                <div className="menu-button-hline" />
+                <div className="menu-button-hline" />
+              </div>
+            )
+          }
+        </button>
+      )}
       <div className={classNames('overlay', menuOpen && 'visible')} onClick={closeMenu} />
       <div className={classNames('left-menu', menuOpen && 'open')}>
-        <div className="left-menu-and-header" onClick={closeMenu}>
-          <h2 className="left-menu-header">Jill Wang</h2>
-        </div>
-
+        <h2 className="left-menu-header">Jill Wang</h2>
         <div className="hline" />
         <div className="left-menu-list-container">
           <div className="left-menu-list">

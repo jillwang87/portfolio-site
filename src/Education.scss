@@ -1,13 +1,23 @@
+@import "responsive";
+
 .education-content {
   text-align: center;
   pre {
     font-family: 'Nunito Sans';
     font-size: 2em;
-    padding-top: 3vh;
+    @media #{$extra-small-screen} {
+      font-size: 1.2em;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+    }
   }
   img {
-    padding-top: 3vh;
+    padding-top: 20px;
     width: 250px;
-    max-width: 80vw;
+    @media #{$medium-screen} {
+      width: 200px;
+    }
   }
 }

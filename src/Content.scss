@@ -7,10 +7,12 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #E5E5E5;
+  background-color: #e9d8d8;
   display: grid;
   grid-template-areas: "left-menu content";
   grid-template-columns: auto 2fr;
+  z-index: 0;
+
   .menu-button {
     display: flex;
     flex-direction: column;
@@ -23,27 +25,35 @@
     width: 50px;
     height: 50px;
     background-color: #c28285;
-    z-index: 20;
-    &:focus {
-      outline: none;
-      box-shadow: none;
+    box-shadow: 4px 4px 8px #888888;
+    z-index: 13;
+    border: 0;
+    .close {
+      width: 40px;
+      height: 40px;
+      &:active {
+        svg {
+          transform: rotate(80deg);
+          transition: transform ease-in-out 150ms;
+        }
+      }
+      .close-icon {
+        stroke: black;
+        fill: transparent;
+        stroke-width: 2;
+      }
+    }
+    @media not #{$large-screen} {
+      display: none;
     }
     .menu-button-hline {
       height: 2px;
       background-color: black;
       width: 20px;
-      margin: 2px;
+      margin: 4px;
     }
   }
-  .left-menu-footer {
-    font-family: 'Syncopate';
-    color: #404040;
-    font-size: 1em;
-  }
 
-  .hamburger-button {
-
-  }
 
   .overlay {
     z-index: 10;
@@ -56,7 +66,9 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity ease-in-out 200ms;
-
+    @media not #{$large-screen} {
+      display: none;
+    }
     &.visible {
       opacity: .6;
       pointer-events: auto;
@@ -65,20 +77,12 @@
 
   .left-menu {
     grid-area: left-menu;
-    .left-menu-and-header {
-      display: flex;
-      flex-direction: row;
-      //justify-content: space-evenly;
-      .left-menu-header {
-        font-family: 'Syncopate';
-        text-align: center;
-        font-size: 24px;
-        margin-left: 30px;
-      }
+    .left-menu-header {
+      font-family: 'Syncopate';
+      text-align: center;
+      font-size: 24px;
     }
-    button {
-      display: none;
-    }
+
     @media #{$large-screen}  {
       position: absolute;
       top: 0;
@@ -108,7 +112,6 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
 
     .left-menu-list-container {
       overflow-y: auto;
@@ -127,18 +130,19 @@
       flex-direction: row;
       align-items: center;
       position: relative;
-      //justify-content: center;
       text-decoration: none;
       color: black;
       padding-top: 8px;
       padding-bottom: 8px;
       font-size: 1.8em;
-      //font-size: calc(2px + 2vmin);
+      @media #{$large-screen} {
+        font-size: 1.5em;
+      }
 
       &:hover {
         transition:  ease-in-out transform 30ms, font-size 100ms;
         transform: translateX(12px);
-        color: #606060;
+        color: #c28285;
       }
 
       svg {
@@ -159,17 +163,27 @@
     }
     .icon {
       img {
-        height: 3vmin;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 30px;
         @media #{$small-screen} {
-          margin: 1vmin;
+          height: 30px;
+          padding-left: 15px;
+          padding-right: 15px;
         }
-        padding-left: 0px;
-        padding-right: 30px;
         transition: transform ease-in-out 100ms;
         &:hover {
-          transform: translateY(-0.5vh);
+          transform: translateY(-1px);
+          filter: invert(67%) sepia(10%) saturate(1206%) hue-rotate(308deg) brightness(83%) contrast(93%);
         }
       }
+    }
+
+    .left-menu-footer {
+      font-family: 'Syncopate';
+      color: #404040;
+      font-size: 0.8em;
+      text-align: center;
     }
   }
 
@@ -179,7 +193,7 @@
     @media #{$large-screen} {
       margin: 0px;
     }
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
@@ -191,6 +205,10 @@
 
       @media #{$small-screen} {
         margin: 30px;
+      }
+
+      @media #{$extra-small-screen} {
+        margin: 0px;
       }
     }
   }
