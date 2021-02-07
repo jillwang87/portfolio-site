@@ -1,61 +1,65 @@
 @import './responsive';
 
+
 .experience-content {
   text-align: center;
-  h1 {
-    padding-top: 0;
-  }
-  dl {
-    font-size: 1.3em;
-    width: 90%;
-    line-height: 1.7;
-    text-align: left;
-  }
-}
-.flippy-cardContainer {
-  min-height: 450px;
-}
 
-.card {
-  margin: 30px;
-  width: 400px;
-  @media #{$extra-small-screen} {
-    margin:10px;
-  }
-  .experience-card-bottom {
-    #text{
-      font-size: 1.7em;
-      @media #{$extra-small-screen} {
-        font-size: 1.8em;
-      }
-    }
-    #subtext {
-      font-size: 1.5em;
-      @media #{$extra-small-screen} {
-        font-size: 1.5em;
-      }
-    }
-  }
-  .experience-card-head {
-    p {
-      font-size: 2em;
-      @media #{$extra-small-screen} {
-        font-size: 1.5em;
-      }
-    }
+  .experience-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-  img {
-    max-width: 100px;
-    max-height: 100px;
-    margin-top: 10px;
+  .card {
+    margin: 30px;
+    width: 400px;
+    @media #{$extra-small-screen} {
+      margin: 10px;
+    }
+
+    .experience-card-head {
+      p {
+        font-size: 2em;
+        @media #{$extra-small-screen} {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .experience-card-bottom {
+      #text {
+        font-size: 1.7em;
+        @media #{$extra-small-screen} {
+          font-size: 1.45em;
+        }
+      }
+
+      #subtext {
+        font-size: 1.5em;
+        @media #{$extra-small-screen} {
+          font-size: 1.3em;
+        }
+      }
+    }
+
+    .experience-card-back {
+      margin: 18px;
+      dl {
+        font-size: 1.3em;
+        line-height: 1.7;
+        text-align: left;
+      }
+    }
+
+    img {
+      max-width: 100px;
+      max-height: 100px;
+      margin-top: 10px;
+    }
   }
 }
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
+

@@ -17,23 +17,23 @@ const CardFooter = ({ text }) => (
 
 function Skills() {
   return (
-    <div className="experience-content">
+    <div className="skills-content">
       <h1>SKILLS</h1>
-      <div className="cards">
+      <div className="skills-cards">
         <Card
           head={<CardHeader title="Data Science"/>}
           bottom={<CardFooter
             text={(
               <dl>
-                <dd>Python</dd>
-                <dd>R</dd>
-                <dd>MATLAB</dd>
-                <dd>Tensorflow Keras</dd>
-                <dd>scikit-learn</dd>
-                <dd>Numpy & Pandas</dd>
-                <dd>Scipy</dd>
-                <dd>statsmodels</dd>
-                <dd>XGBoost</dd>
+                <dt>Python</dt>
+                <dt>R</dt>
+                <dt>MATLAB</dt>
+                <dt>Tensorflow Keras</dt>
+                <dt>scikit-learn</dt>
+                <dt>Numpy & Pandas</dt>
+                <dt>Scipy</dt>
+                <dt>statsmodels</dt>
+                <dt>XGBoost</dt>
               </dl>
             )}
           />}
@@ -42,9 +42,9 @@ function Skills() {
           head={<CardHeader title="Frontend Development" text="EntSoc at UW"/>}
           bottom={<CardFooter text={(
             <dl>
-              <dd>JavaScript</dd>
-              <dd>HTML & CSS/ SASS</dd>
-              <dd>React</dd>
+              <dt>JavaScript</dt>
+              <dt>HTML & CSS/ SASS</dt>
+              <dt>React</dt>
             </dl>
           )}
           />}
@@ -53,9 +53,9 @@ function Skills() {
           head={<CardHeader title="Others" text="EntSoc at UW"/>}
           bottom={<CardFooter text={(
             <dl>
-              <dd>C/ C++</dd>
-              <dd>Bash</dd>
-              <dd>Git</dd>
+              <dt>C/ C++</dt>
+              <dt>Bash</dt>
+              <dt>Git</dt>
             </dl>
           )}
           />}

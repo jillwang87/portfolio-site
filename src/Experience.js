@@ -23,29 +23,29 @@ function Experience () {
   return (
     <div className="experience-content">
       <h1>EXPERIENCE</h1>
-      <div className="cards">
+      <div className="experience-cards">
         <Card
           head={<CardHeader src={graphenLogo} text="Graphen" />}
           bottom={<CardFooter text="Data Scientist & Software Developer" subtext="Jun 2019 - Aug 2019" />}
           makeFlip={ true }
         >
-          <dl>
-            <dd>
+          <dl className="experience-card-back">
+            <dt>
               - Developed an unsupervised Holt Winter model on time series data and a supervised XGBoost model
               on multivariate data, both for the purpose of performing financial behaviour anomaly detection
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Advised company leadership on strategies to combine the company's core product, a fast and
               efficient graph database, with machine learning models that helped land a proof-of-concept project
               with one of the largest banks in Taiwan
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Developed the frontend of a React-based anti-money-laundering platform
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Technologies: Python, Numpy, Pandas, scikit-learn, XGBoost, Git, JavaScript, React,
               GraphQL, ElasticSearch, SASS, CSS
-            </dd>
+            </dt>
           </dl>
         </Card>
         <Card
@@ -54,18 +54,18 @@ function Experience () {
           makeFlip={true}
         >
           <dl>
-            <dd>
+            <dt>
               - Developed a website with the UI/UX team
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Transitioned the static desktop website to a fully responsive, mobile friendly experience
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Link: <a href="https://entsoc.ca/">https://entsoc.ca/</a>
-            </dd>
-            <dd>
+            </dt>
+            <dt>
               - Technologies: JavaScript, React, SASS, CSS3, Git
-            </dd>
+            </dt>
           </dl>
         </Card>
       </div>

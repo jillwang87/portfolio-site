@@ -1,39 +1,39 @@
 @import "responsive";
-.card {
-  margin: 30px;
-  width: 400px;
-  @media #{$extra-small-screen} {
-    margin:10px;
-  }
-  .skills-card-bottom {
-    #text {
-      font-size: 1.4em;
+
+.skills-content {
+  text-align: center;
+
+  .skills-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .card {
+      margin: 30px;
+      width: 400px;
       @media #{$extra-small-screen} {
-        font-size: 1em;
+        margin: 10px;
+      }
+      .skills-card-head {
+        p {
+          font-size: 2em;
+          @media #{$extra-small-screen} {
+            font-size: 1.5em;
+          }
+        }
+      }
+
+      .skills-card-bottom {
+        #text {
+          font-size: 1.4em;
+          @media #{$extra-small-screen} {
+            font-size: 1em;
+          }
+        }
       }
     }
   }
-  .skills-card-head {
-    p {
-      font-size: 2em;
-      @media #{$extra-small-screen} {
-        font-size: 1.5em;
-      }
-    }
-  }
-
-
-  img {
-    max-width: 100px;
-    max-height: 100px;
-    margin-top: 10px;
-  }
 }
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
