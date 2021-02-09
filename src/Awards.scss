@@ -1,10 +1,10 @@
 @import './responsive';
 
 
-.experience-content {
+.awards-content {
   text-align: center;
 
-  .experience-cards {
+  .awards-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,41 +15,44 @@
 
   .card {
     margin: 30px;
-    width: 400px;
+    width: 800px;
     @media #{$extra-small-screen} {
       margin: 10px;
     }
 
-    .experience-card-head {
+    .awards-card-head {
       p {
-        font-size: 2em;
-        @media #{$extra-small-screen} {
-          font-size: 1.5em;
-        }
-      }
-      img {
-        max-width: 100px;
-        max-height: 100px;
-        margin-top: 10px;
-      }
-    }
-
-    .experience-card-footer {
-      #text {
-        font-size: 1.7em;
-        @media #{$extra-small-screen} {
-          font-size: 1.45em;
-        }
-      }
-
-      #subtext {
-        font-size: 1.5em;
+        font-size: 1.8em;
         @media #{$extra-small-screen} {
           font-size: 1.3em;
         }
       }
     }
 
+    .awards-card-footer {
+      #text {
+        font-size: 1.5em;
+        @media #{$extra-small-screen} {
+          font-size: 1em;
+        }
+
+      }
+      img {
+        width: 400px;
+        @media #{$extra-small-screen} {
+          width: 200px;
+        }
+      }
+    }
+
+    .awards-card-back {
+      margin: 18px;
+      dl {
+        font-size: 1.3em;
+        line-height: 1.7;
+        text-align: left;
+      }
+    }
 
   }
 }

@@ -12,7 +12,7 @@ const CardHeader  = ({ src, text }) => (
 );
 
 const CardFooter = ({ text, subtext }) => (
-  <div className='experience-card-bottom'>
+  <div className='experience-card-footer'>
     <p id="text">{text}</p>
     <p id="subtext">{subtext}</p>
   </div>
@@ -50,7 +50,7 @@ function Experience () {
         </Card>
         <Card
           head={<CardHeader src={entsocLogo} text="EntSoc at UW" />}
-          bottom={<CardFooter text="Software Developer" subtext="Jun 2019 - Aug 2019" />}
+          bottom={<CardFooter text="Software Developer" subtext="Jan 2019 - Apr 2020" />}
           makeFlip={true}
         >
           <dl>

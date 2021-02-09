@@ -1,0 +1,28 @@
+@import './responsive';
+.resume-content {
+  text-align: center;
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    padding-top: 2vh;
+    font-size: 1.4em;
+    @media #{$extra-small-screen}  {
+      font-size: 1.3em;
+      text-align: center;
+    }
+    line-height: 2;
+    text-align: left;
+
+  }
+  img {
+    float: right;
+    max-height: 200px;
+    justify-content: right;
+    border-radius: 77.279px;
+    margin-bottom: 20px;
+    @media #{$extra-small-screen}  {
+      justify-content: center;
+    }
+  }
+}

@@ -9,7 +9,7 @@ const CardHeader = ({ title }) => (
 );
 
 const CardFooter = ({ text }) => (
-  <div className='skills-card-bottom'>
+  <div className='skills-card-footer'>
     <p id="text">{text}</p>
   </div>
 );

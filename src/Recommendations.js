@@ -9,7 +9,7 @@ const CardHeader = ({ title }) => (
 );
 
 const CardFooter = ({ text }) => (
-  <div className="recom-card-bottom">
+  <div className="recom-card-footer">
     <p id="text">{text}</p>
   </div>
 );

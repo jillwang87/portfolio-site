@@ -9,6 +9,8 @@ import closeIcon from './images/close.png'
 import './Content.scss';
 import Skills from './Skills';
 import Recommendations from './Recommendations';
+import Awards from './Awards';
+import Resume from './Resume';
 
 const rightCaret = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -57,10 +59,10 @@ const Content = () => {
       content = (<> volun </>);
       break;
     case 'awards':
-      content = (<> awards </>);
+      content = (<Awards />);
       break;
     case 'resume':
-      content = (<> resume </>);
+      content = (<Resume />);
       break;
     default:
       throw new Error(`Unexpected current content item: ${current}`);
