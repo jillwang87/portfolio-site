@@ -42,7 +42,7 @@ function Recommendations() {
           bottom={<CardFooter
             text=" &ldquo;... I enjoyed working with Jill. She is very motivated and outspoken. During her
             internship, she was able to work independently and learn relevant technologies very quickly. She
-             contributed to our React.js codebase immediately even though she came in halfway through...“
+             contributed to our React.js codebase immediately even though she came in halfway through...
                 &rdquo;"
 
           />}

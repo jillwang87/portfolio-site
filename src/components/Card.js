@@ -1,7 +1,7 @@
 import React from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
-function Card ({ head, bottom, children, makeFlip }) {
+function Card ({ head, bottom, children, makeFlip = false }) {
   return (
     <div className="card">
       <Flippy

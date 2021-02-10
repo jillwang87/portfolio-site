@@ -7,7 +7,9 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #e9d8d8;
+  //background-color: #e2d9cf;
+  background-image: url("./images/background5.jpg");
+  background-size: cover;
   display: grid;
   grid-template-areas: "left-menu content";
   grid-template-columns: auto 2fr;
@@ -80,7 +82,9 @@
     padding: 24px 48px;
     justify-content: center;
     background-color: white;
-
+    //background-image: url("./images/background4.jpg");
+    background-size: cover;
+    height: 100vh;
     opacity: 50%;
     display: flex;
     flex-direction: column;

@@ -1,10 +1,10 @@
 @import './responsive';
 
 
-.experience-content {
+.projects-content {
   text-align: center;
 
-  .experience-cards {
+  .projects-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,39 +20,27 @@
       margin: 10px;
     }
 
-    .experience-card-head {
+    .projects-card-head {
       p {
-        font-size: 2em;
+        font-size: 1.9em;
         @media #{$extra-small-screen} {
           font-size: 1.5em;
         }
       }
-      img {
-        max-width: 100px;
-        max-height: 100px;
-        margin-top: 10px;
-      }
     }
 
-    .experience-card-footer {
+    .projects-card-footer {
       #text {
-        font-size: 1.7em;
+        font-size: 1.4em;
         @media #{$extra-small-screen} {
-          font-size: 1.45em;
+          font-size: 1.2em;
         }
       }
 
       #subtext {
-        font-size: 1.5em;
+        font-size: 1.2em;
         @media #{$extra-small-screen} {
-          font-size: 1.3em;
-        }
-      }
-    }
-    .projects-card-back {
-      dt {
-        #bold {
-          font-weight: bold;
+          font-size: 1em;
         }
       }
     }

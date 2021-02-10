@@ -11,6 +11,8 @@ import Skills from './Skills';
 import Recommendations from './Recommendations';
 import Awards from './Awards';
 import Resume from './Resume';
+import Volunteering from './Volunteering';
+import Projects from './Projects';
 
 const rightCaret = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -53,10 +55,10 @@ const Content = () => {
       content = (<Recommendations />);
       break;
     case 'projects':
-      content = (<> projects </>);
+      content = (<Projects />);
       break;
     case 'volunteering':
-      content = (<> volun </>);
+      content = (<Volunteering />);
       break;
     case 'awards':
       content = (<Awards />);
