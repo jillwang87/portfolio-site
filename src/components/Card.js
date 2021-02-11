@@ -1,11 +1,13 @@
 import React from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import useMobileDetect from 'use-mobile-detect-hook';
 
 function Card ({ head, bottom, children, makeFlip = false }) {
+  const device = useMobileDetect();
   return (
     <div className="card">
       <Flippy
-        flipOnHover={ makeFlip }
+        flipOnHover={ makeFlip && !device.isMobile() }
         flipOnClick={ makeFlip }
         flipDirection="vertically"
         className="experience-card"
