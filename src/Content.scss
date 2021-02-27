@@ -94,7 +94,7 @@
     }
 
     @media #{$large-screen}  {
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       transform: translateX(-100%);
@@ -116,8 +116,6 @@
       margin-bottom: 12px;
       flex-shrink: 0;
     }
-
-
 
     .left-menu-list-container {
       overflow-y: auto;
@@ -199,11 +197,16 @@
     @media #{$large-screen} {
       margin: 0px;
     }
+    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
     background-color: white;
+    @media #{$small-screen} {
+      min-height: 100vh;
+    }
+
     .frame {
       padding: 40px;
       align-items: center;

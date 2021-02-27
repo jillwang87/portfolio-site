@@ -6,13 +6,13 @@ import kaggleIcon from '../images/kaggle-icon.png';
 const kaggleAddr = "https://www.kaggle.com/jillwang87";
 const githubAddr = "https://github.com/jillwang87";
 const linkedinAddr = "https://www.linkedin.com/in/jill-ycwang98/";
-const emailAddr = "jill.ycwang98@gmail.com";
+const emailAddr = "mailto:jill.ycwang98@gmail.com";
 
 
 
 const createIconLink = (addr, title, img) => (
   <div className="icon">
-    <a href={addr}>
+    <a href={addr} target="_blank">
       <img src={img} alt={title} />
     </a>
   </div>

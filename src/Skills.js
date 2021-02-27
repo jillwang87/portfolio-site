@@ -43,7 +43,8 @@ function Skills() {
           bottom={<CardFooter text={(
             <dl>
               <dt>JavaScript</dt>
-              <dt>HTML & CSS/ SASS</dt>
+              <dt>HTML</dt>
+              <dt>CSS / SASS</dt>
               <dt>React</dt>
             </dl>
           )}

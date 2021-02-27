@@ -11,6 +11,7 @@
   text-align: center;
   background-color: white;
   z-index: 1;
+  position: fixed;
   h1 {
     font-family: 'Syncopate';
   }
@@ -35,11 +36,11 @@
     .icon {
       img {
         height: 80px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 0 30px;
         transition: transform ease-in-out 100ms;
         @media #{$extra-small-screen} {
           height: 50px;
+          padding: 0 20px;
         }
         &:hover {
           transform: translateY(-0.5vh);

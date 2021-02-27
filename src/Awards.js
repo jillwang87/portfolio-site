@@ -30,7 +30,7 @@ function Awards() {
                 <p id="text">
                   An Android app with an AI chat-bot designed to connect university students to on-campus mental
                   health resources <br/> Link:
-                  <a href="https://devpost.com/software/nova-29i4zx"> Devpost </a>
+                  <a href="https://devpost.com/software/nova-29i4zx"> Devpost</a>
                 </p>
               }
               src={novaTeamPhoto}
