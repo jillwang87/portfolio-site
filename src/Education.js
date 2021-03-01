@@ -38,7 +38,7 @@ function Education () {
           <dt>Object-Oriented Software Development (C++) </dt>
           <dt>Data Types and Structures (Python) </dt>
           <dt>Algorithmic Problem Solving (Python) </dt>
-          <dt> Computer Applications inBusiness: Databases (SQLite) </dt>
+          <dt> Computer Applications in Business: Databases (SQLite) </dt>
         </dl>
       </p>
       <h3>
