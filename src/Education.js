@@ -23,7 +23,7 @@ function Education () {
         <dl>
           <dt>Statistical Learning-Classification</dt>
           <dt>Sampling and Experimental Design </dt>
-          <dt>GeneralizedLinear Models & Applications</dt>
+          <dt>Generalized Linear Models & Applications</dt>
           <dt>Applied Probability</dt>
           <dt>Data Visualization</dt>
           <dt>Computational Statistics and Data Analysis</dt>
@@ -36,7 +36,7 @@ function Education () {
       <p>
         <dl>
           <dt>Object-Oriented Software Development (C++) </dt>
-          <dt>DataTypes and Structures (Python) </dt>
+          <dt>Data Types and Structures (Python) </dt>
           <dt>Algorithmic Problem Solving (Python) </dt>
           <dt> Computer Applications inBusiness: Databases (SQLite) </dt>
         </dl>
