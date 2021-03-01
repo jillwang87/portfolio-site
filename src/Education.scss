@@ -20,4 +20,23 @@
       width: 200px;
     }
   }
+  h2 {
+    padding-top: 30px;
+    font-size: 1.6em;
+    @media #{$extra-small-screen} {
+      font-size: 1.2em;
+    }
+  }
+  h3 {
+    font-size: 1.5em;
+    @media #{$extra-small-screen} {
+      font-size: 1.1em;
+    }
+  }
+  dt {
+    font-size: 1.3em;
+    @media #{$extra-small-screen} {
+      font-size: 1em;
+    }
+  }
 }

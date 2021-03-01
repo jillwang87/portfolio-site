@@ -61,7 +61,7 @@ function Experience () {
               - Transitioned the static desktop website to a fully responsive, mobile friendly experience
             </dt>
             <dt>
-              - Link: <a href="https://entsoc.ca/">https://entsoc.ca/</a>
+              - Link: <a href="https://entsoc.ca/" target="_blank">https://entsoc.ca/</a>
             </dt>
             <dt>
               - Technologies: JavaScript, React, SASS, CSS3, Git

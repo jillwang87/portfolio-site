@@ -13,6 +13,44 @@ function Education () {
         & Statistics, Honours {'\n'}
         with a Computing Option
       </pre>
+      <h2>
+        Relevant Coursework:
+      </h2>
+      <h3>
+        Data Science
+      </h3>
+      <p>
+        <dl>
+          <dt>Statistical Learning-Classification</dt>
+          <dt>Sampling and Experimental Design </dt>
+          <dt>GeneralizedLinear Models & Applications</dt>
+          <dt>Applied Probability</dt>
+          <dt>Data Visualization</dt>
+          <dt>Computational Statistics and Data Analysis</dt>
+          <dt>Mathematical Statistics </dt>
+        </dl>
+      </p>
+      <h3>
+        Programming
+      </h3>
+      <p>
+        <dl>
+          <dt>Object-Oriented Software Development (C++) </dt>
+          <dt>DataTypes and Structures (Python) </dt>
+          <dt>Algorithmic Problem Solving (Python) </dt>
+          <dt> Computer Applications inBusiness: Databases (SQLite) </dt>
+        </dl>
+      </p>
+      <h3>
+        Applied Mathematics
+      </h3>
+      <p>
+        <dl>
+          <dt>Applied Cryptography  </dt>
+          <dt>Deterministic Operation Research Models  </dt>
+          <dt>Computational Methods for Differential Equations </dt>
+        </dl>
+      </p>
     </div>
   );
 }

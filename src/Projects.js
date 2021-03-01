@@ -22,14 +22,65 @@ function Projects () {
       <h1>PROJECTS</h1>
       <div className="projects-cards">
         <Card
+          head={<CardHeader text="Spotify Music Analysis" />}
+          bottom={
+            <CardFooter
+              text="Use the Spotify Web API to retrieve my music streaming history features and analyze
+                  my music taste. This project is still in development."
+              subtext={
+                (
+                  <>
+                    <p>GitHub Repo:&nbsp;
+                      <a href="https://github.com/jillwang87/spotify-analysis"
+                         target="_blank">
+                        Link
+                      </a>
+                    </p>
+                  </>
+                )
+              }
+            />}
+          makeFlip={false}
+        />
+        <Card
+          head={<CardHeader text="Jewellery Shop Prediction"/>}
+          bottom={<CardFooter
+            text="Predicting whether an online jewellery shop visitor will purchase an item from
+          the shop using XGBoost with 93.33% accuracy"
+            subtext="p.s. I will upload my code after I have cleaned up my code"/>}
+          makeFlip={true}
+        >
+          <dl className="projects-card-back">
+            <dt>
+              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge1/leaderboard"
+                                       target="_blank">Link</a>
+            </dt>
+            <dt>
+              - Use XGBoost on the highly imbalanced classification dataset
+            </dt>
+            <dt>
+              - Use grid search to tune the hyperparameters
+            </dt>
+            <dt>
+              - Use stratified, shuffled (randomized observations order) 4 fold cross validation to estimate accuracy,
+            </dt>
+            <dt>
+              - Technologies: Python, scikit-learn, XGBoost
+            </dt>
+          </dl>
+        </Card>
+        <Card
           head={<CardHeader text="Fashion MNIST" />}
-          bottom={<CardFooter text="Using Fashion MNIST dataset (fashion items images), achieved 94.73% accuracy
-          with a CNN that ran within 20 minutes" />}
+          bottom={<CardFooter
+            text="Using Fashion MNIST dataset (fashion items images), achieved 94.73% accuracy
+          with a CNN that ran within 20 minutes"
+            subtext="p.s. I will upload my code after I have cleaned up my code"/>}
           makeFlip={ true }
         >
           <dl className="projects-card-back">
             <dt>
-              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge2/leaderboard">Link</a>
+              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge2/leaderboard"
+                                       target="_blank">Link</a>
             </dt>
             <dt>
               - Since Fashion MNIST images are heavily preprocessed, a small CNN can most likely outperform a deep net;
@@ -50,52 +101,52 @@ function Projects () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader text="Jewellery Shop Prediction" />}
-          bottom={<CardFooter text="Predicting whether an online jewellery shop visitor will purchase an item from
-          the shop using XGBoost with 93.33% accuracy" />}
-          makeFlip={ true }
-        >
-          <dl className="projects-card-back">
-            <dt>
-              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge1/leaderboard">Link</a>
-            </dt>
-            <dt>
-              - Use XGBoost on the highly imbalanced classification dataset
-            </dt>
-            <dt>
-              - Use grid search to tune the hyperparameters
-            </dt>
-            <dt>
-              - Use stratified, shuffled (randomized observations order) 4 fold cross validation to estimate accuracy,
-            </dt>
-            <dt>
-              - Technologies: Python, scikit-learn, XGBoost
-            </dt>
-          </dl>
-        </Card>
-        <Card
-          head={<CardHeader text="Portfolio Site" />}
-          bottom={<CardFooter text="Thanks for visiting :)" subtext="" />}
-          makeFlip={ true }
-        >
-          <dl className="projects-card-back">
-            <dt>
-              - Designed on Figma: <a href="https://www.figma.com/file/17TM6aWfuknDyR2q8AB6lY/Portfolio-Site?node-id=12%3A341/">Figma Link</a>
-              <br/>I am not a designer so be kind :P
-            </dt>
-            <dt>
-              - Built the mobile responsive portfolio site using React
-            </dt>
-            <dt>
-              - Technologies: JavaScript, React, SASS
-            </dt>
-          </dl>
-        </Card>
-        <Card
-          head={<CardHeader text="Music Trend Analysis" />}
-          bottom={<CardFooter text="Using Spotify Web API to obtain music data to analyze music trend." subtext="Coming Soon..." />}
+          head={<CardHeader text="Python Cheatsheet Wiki" />}
+          bottom={
+            <CardFooter
+              text="Journaling some useful code for all kinds of python data science projects that
+          has helped me. Visit the wiki section of the repo to view the content."
+              subtext={
+                <>
+                  <p>GitHub Repo:&nbsp;
+                    <a href="https://github.com/jillwang87/python-cheatsheet-wiki/wiki"
+                       target="_blank">
+                      Link
+                    </a>
+                  </p>
+                </>
+              }
+            />
+            }
           makeFlip={false}
         />
+        <Card
+          head={<CardHeader text="Portfolio Site" />}
+          bottom={
+            <CardFooter
+              text="Thanks for visiting :)"
+              subtext={
+                <>
+                  <p>GitHub Repo:&nbsp;
+                    <a href="https://github.com/jillwang87/portfolio-site"
+                       target="_blank">
+                      Link
+                    </a>
+                    , Figma Design:&nbsp;
+                    <a href="https://www.figma.com/file/17TM6aWfuknDyR2q8AB6lY/Portfolio-Site?node-id=12%3A341/"
+                       target="_blank">
+                      Link
+                    </a>
+                  </p>
+                  <p>
+                  </p>
+                </>
+              }
+            />
+          }
+          makeFlip={ false }
+        >
+        </Card>
       </div>
     </div>
 
