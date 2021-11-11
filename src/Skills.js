@@ -20,24 +20,48 @@ function Skills() {
     <div className="skills-content">
       <h1>SKILLS</h1>
       <div className="skills-cards">
+          <Card
+              head={<CardHeader title="Data Science"/>}
+              bottom={<CardFooter
+                  text={(
+                      <dl>
+                          <dt>Python</dt>
+                          <dt>R</dt>
+                          <dt>MATLAB</dt>
+                          <dt>Tensorflow Keras</dt>
+                          <dt>scikit-learn</dt>
+                          <dt>spacy</dt>
+                          <dt>numpy & pandas</dt>
+                          <dt>Scipy</dt>
+                          <dt>statsmodels</dt>
+                          <dt>XGBoost</dt>
+                      </dl>
+                  )}
+              />}
+              makeFlip={false}/>
         <Card
-          head={<CardHeader title="Data Science"/>}
+          head={<CardHeader title="ETL"/>}
           bottom={<CardFooter
             text={(
               <dl>
-                <dt>Python</dt>
-                <dt>R</dt>
-                <dt>MATLAB</dt>
-                <dt>Tensorflow Keras</dt>
-                <dt>scikit-learn</dt>
-                <dt>Numpy & Pandas</dt>
-                <dt>Scipy</dt>
-                <dt>statsmodels</dt>
-                <dt>XGBoost</dt>
+                  <dt>Impala</dt>
+                  <dt>Hive</dt>
+                  <dt>Oozie</dt>
+                  <dt>SQL</dt>
               </dl>
             )}
           />}
           makeFlip={false}/>
+          <Card
+              head={<CardHeader title="Business Intelligence (BI)"/>}
+              bottom={<CardFooter
+                  text={(
+                      <dl>
+                          <dt>Tableau</dt>
+                      </dl>
+                  )}
+              />}
+              makeFlip={false}/>
         <Card
           head={<CardHeader title="Frontend Development" text="EntSoc at UW"/>}
           bottom={<CardFooter text={(

@@ -22,13 +22,12 @@
 
     .experience-card-head {
       p {
-        font-size: 2em;
+        font-size: 1.8em;
         @media #{$extra-small-screen} {
           font-size: 1.5em;
         }
       }
       img {
-        max-width: 100px;
         max-height: 100px;
         margin-top: 10px;
       }
@@ -36,14 +35,14 @@
 
     .experience-card-footer {
       #text {
-        font-size: 1.7em;
+        font-size: 1.5em;
         @media #{$extra-small-screen} {
           font-size: 1.45em;
         }
       }
 
       #subtext {
-        font-size: 1.5em;
+        font-size: 1.2em;
         @media #{$extra-small-screen} {
           font-size: 1.3em;
         }

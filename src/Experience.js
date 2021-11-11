@@ -1,6 +1,8 @@
 import React from 'react';
 import graphenLogo from './images/graphen-logo.png'
 import entsocLogo from './images/entsoc-logo.png'
+import adastraLogo from './images/adastra-logo.jpg'
+import tdLogo from './images/td-logo.png'
 import Card from './components/Card';
 import './Experience.scss'
 
@@ -24,6 +26,52 @@ function Experience () {
     <div className="experience-content">
       <h1>EXPERIENCE</h1>
       <div className="experience-cards">
+        <Card
+            head={<CardHeader src={tdLogo} text="TD (via Adastra)" />}
+            bottom={<CardFooter text="Data Analytics Developer" subtext="May 2021 - Present" />}
+            makeFlip
+        >
+          <dl className="experience-card-back">
+            <dt>
+              - Developing a Python based data lifecycle management (DLM) tool: a scanner that leverages either local
+              files or Hadoop tables' metadata to predict security classifications and retention periods using ML,
+              Computational Linguistics, and NLP
+            </dt>
+            <dt>
+              - Technology: Impala, Python, pandas, NumPy, scikit-learn, NLP, tkinter, spaCy
+            </dt>
+            <dt>
+              - ETL from Hadoop and developing tableau dashboards
+            </dt>
+            <dt>
+              - Technology: Impala, Python, pandas, NumPy, Tableau, Oozie
+            </dt>
+          </dl>
+        </Card>
+        <Card
+            head={<CardHeader src={adastraLogo} text="Adastra North America" />}
+            bottom={<CardFooter text="Data Science Consultant" subtext="Apr 2021 - Present" />}
+            makeFlip={ false }
+        >
+          <dl className="experience-card-back">
+            <dt>
+              - Developed an unsupervised Holt Winter model on time series data and a supervised XGBoost model
+              on multivariate data, both for the purpose of performing financial behaviour anomaly detection
+            </dt>
+            <dt>
+              - Advised company leadership on strategies to combine the company's core product, a fast and
+              efficient graph database, with machine learning models that helped land a proof-of-concept project
+              with one of the largest banks in Taiwan
+            </dt>
+            <dt>
+              - Developed the frontend of a React-based anti-money-laundering platform
+            </dt>
+            <dt>
+              - Technologies: Python, Numpy, Pandas, scikit-learn, XGBoost, Git, JavaScript, React,
+              GraphQL, ElasticSearch, SASS, CSS
+            </dt>
+          </dl>
+        </Card>
         <Card
           head={<CardHeader src={graphenLogo} text="Graphen" />}
           bottom={<CardFooter text="Data Scientist & Software Developer" subtext="Jun 2019 - Aug 2019" />}
@@ -59,9 +107,6 @@ function Experience () {
             </dt>
             <dt>
               - Transitioned the static desktop website to a fully responsive, mobile friendly experience
-            </dt>
-            <dt>
-              - Link: <a href="https://entsoc.ca/" target="_blank">https://entsoc.ca/</a>
             </dt>
             <dt>
               - Technologies: JavaScript, React, SASS, CSS3, Git

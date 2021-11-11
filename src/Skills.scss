@@ -18,7 +18,7 @@
       }
       .skills-card-head {
         p {
-          font-size: 2em;
+          font-size: 1.7em;
           @media #{$extra-small-screen} {
             font-size: 1.5em;
           }
@@ -27,7 +27,7 @@
 
       .skills-card-footer {
         #text {
-          font-size: 1.4em;
+          font-size: 1.2em;
           @media #{$extra-small-screen} {
             font-size: 1em;
           }

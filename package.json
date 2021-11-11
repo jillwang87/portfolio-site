@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "node-sass": "4.14.1",
+    "dart-sass": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-flippy": "^0.1.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "sass": "^1.43.4",
     "use-mobile-detect-hook": "^1.0.3"
   },
   "scripts": {
@@ -17,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && cp 404.html build/404.html && touch build/.nojekyll",
+    "predeploy": "yarn run build && cp 404.html build/404.html && touch build/.nojekyll",
     "deploy": "gh-pages --dotfiles --repo git@github.com:jillwang87/jillwang87.github.io.git -b master -d build",
     "clean": "gh-pages-clean"
   },
