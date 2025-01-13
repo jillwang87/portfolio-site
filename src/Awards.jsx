@@ -56,7 +56,7 @@ function Awards() {
             <CardFooter
               text={
                 <p id="text">
-                  F all 2020 with term average 86.33%, <br/> Winter 2020 with term average 83.00%
+                  Fall 2020 with term average 86.33%, <br/> Winter 2020 with term average 83.00%
                 </p>
               }
             />
