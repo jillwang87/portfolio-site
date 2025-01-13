@@ -3,23 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "classnames": "^2.2.6",
     "dart-sass": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-flippy": "^0.1.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
-    "sass": "^1.43.4",
-    "use-mobile-detect-hook": "^1.0.3"
+    "sass": "^1.83.1",
+    "use-mobile-detect-hook": "^1.0.3",
+    "vite": "^6.0.7",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build && cp 404.html build/404.html && touch build/.nojekyll",
-    "deploy": "gh-pages --dotfiles --repo git@github.com:jillwang87/jillwang87.github.io.git -b master -d build",
+    "start": "vite",
+    "build": "vite build",
+    "predeploy": "yarn run build && cp 404.html dist/404.html && touch dist/.nojekyll",
+    "deploy": "gh-pages --dotfiles --repo git@github.com:jillwang87/jillwang87.github.io.git -b master -d dist",
     "clean": "gh-pages-clean"
   },
   "eslintConfig": {

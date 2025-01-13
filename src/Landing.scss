@@ -1,4 +1,4 @@
-@import "responsive";
+@use "responsive";
 .hero {
   font-family: 'Syncopate';
   grid-row: 1 / 1;
@@ -20,7 +20,7 @@
   }
   h6 {
     font-size: 20px;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 15px;
     }
   }
@@ -38,7 +38,7 @@
         height: 80px;
         padding: 0 30px;
         transition: transform ease-in-out 100ms;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           height: 50px;
           padding: 0 20px;
         }

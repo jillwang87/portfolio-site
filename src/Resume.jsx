@@ -1,4 +1,4 @@
-import resume from './docs/Jill_Wang_Resume_Data_Scientist.pdf';
+import resume from './docs/Jill_Wang_Resume_Data_Scientist_2025.pdf';
 import React from 'react';
 import './Resume.scss'
 

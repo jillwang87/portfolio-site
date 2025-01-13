@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 
 
 .experience-content {
@@ -16,14 +16,14 @@
   .card {
     margin: 30px;
     width: 400px;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       margin: 10px;
     }
 
     .experience-card-head {
       p {
         font-size: 1.8em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.5em;
         }
       }
@@ -36,14 +36,14 @@
     .experience-card-footer {
       #text {
         font-size: 1.5em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.45em;
         }
       }
 
       #subtext {
         font-size: 1.2em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.3em;
         }
       }

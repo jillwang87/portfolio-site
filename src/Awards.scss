@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 
 
 .awards-content {
@@ -16,14 +16,14 @@
   .card {
     margin: 30px;
     width: 800px;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       margin: 10px;
     }
 
     .awards-card-head {
       p {
         font-size: 1.8em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.3em;
         }
       }
@@ -32,14 +32,14 @@
     .awards-card-footer {
       #text {
         font-size: 1.5em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1em;
         }
 
       }
       img {
         width: 400px;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           width: 200px;
         }
       }

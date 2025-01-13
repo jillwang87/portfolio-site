@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 
 
 .projects-content {
@@ -16,14 +16,14 @@
   .card {
     margin: 30px;
     width: 400px;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       margin: 10px;
     }
 
     .projects-card-head {
       p {
         font-size: 1.9em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.5em;
         }
       }
@@ -32,14 +32,14 @@
     .projects-card-footer {
       #text {
         font-size: 1.4em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.2em;
         }
       }
 
       #subtext {
         font-size: 1.2em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1em;
         }
       }

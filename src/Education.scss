@@ -1,11 +1,11 @@
-@import "responsive";
+@use "responsive";
 
 .education-content {
   text-align: center;
   pre {
     font-family: 'Nunito Sans';
     font-size: 2em;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 1.3em;
       white-space: pre-wrap;
       white-space: -moz-pre-wrap;
@@ -16,26 +16,26 @@
   img {
     padding-top: 20px;
     width: 250px;
-    @media #{$medium-screen} {
+    @media #{responsive.$medium-screen} {
       width: 200px;
     }
   }
   h2 {
     padding-top: 30px;
     font-size: 1.6em;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 1.2em;
     }
   }
   h3 {
     font-size: 1.5em;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 1.1em;
     }
   }
   dt {
     font-size: 1.3em;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 1em;
     }
   }

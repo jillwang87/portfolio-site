@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 
 .content {
   grid-row: 1 / 1;
@@ -33,19 +33,8 @@
     .close {
       width: 40px;
       height: 40px;
-      &:active {
-        svg {
-          transform: rotate(80deg);
-          transition: transform ease-in-out 150ms;
-        }
-      }
-      .close-icon {
-        stroke: black;
-        fill: transparent;
-        stroke-width: 2;
-      }
     }
-    @media not #{$large-screen} {
+    @media not #{responsive.$large-screen} {
       display: none;
     }
     .menu-button-hline {
@@ -68,7 +57,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity ease-in-out 200ms;
-    @media not #{$large-screen} {
+    @media not #{responsive.$large-screen} {
       display: none;
     }
     &.visible {
@@ -93,7 +82,7 @@
       font-size: 24px;
     }
 
-    @media #{$large-screen}  {
+    @media #{responsive.$large-screen}  {
       position: fixed;
       top: 0;
       bottom: 0;
@@ -139,7 +128,7 @@
       padding-top: 8px;
       padding-bottom: 8px;
       font-size: 1.8em;
-      @media #{$large-screen} {
+      @media #{responsive.$large-screen} {
         font-size: 1.5em;
       }
 
@@ -170,7 +159,7 @@
         padding-left: 20px;
         padding-right: 20px;
         height: 30px;
-        @media #{$small-screen} {
+        @media #{responsive.$small-screen} {
           height: 30px;
           padding-left: 15px;
           padding-right: 15px;
@@ -194,7 +183,7 @@
   .content-main {
     grid-area: content;
     margin: 40px;
-    @media #{$large-screen} {
+    @media #{responsive.$large-screen} {
       margin: 0px;
     }
     -webkit-overflow-scrolling: touch;
@@ -203,7 +192,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    @media #{$small-screen} {
+    @media #{responsive.$small-screen} {
       min-height: 100vh;
     }
 
@@ -212,11 +201,11 @@
       align-items: center;
       justify-content: center;
 
-      @media #{$small-screen} {
+      @media #{responsive.$small-screen} {
         margin: 30px;
       }
 
-      @media #{$extra-small-screen} {
+      @media #{responsive.$extra-small-screen} {
         margin: 0px;
       }
     }

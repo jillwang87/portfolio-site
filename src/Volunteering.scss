@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 
 
 .volunteering-content {
@@ -19,14 +19,14 @@
   .card {
     margin: 30px;
     width: 380px;
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       margin: 10px;
     }
 
     .volunteering-card-head {
       p {
         font-size: 2em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.5em;
         }
       }
@@ -39,14 +39,14 @@
     .volunteering-card-footer {
       #text {
         font-size: 1.7em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.45em;
         }
       }
 
       #subtext {
         font-size: 1.5em;
-        @media #{$extra-small-screen} {
+        @media #{responsive.$extra-small-screen} {
           font-size: 1.3em;
         }
       }

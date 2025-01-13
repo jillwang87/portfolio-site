@@ -1,4 +1,4 @@
-@import './responsive';
+@use './responsive';
 .about-content {
   text-align: center;
   h1 {
@@ -7,7 +7,7 @@
   p {
     padding-top: 2vh;
     font-size: 1.4em;
-    @media #{$extra-small-screen}  {
+    @media #{responsive.$extra-small-screen}  {
       font-size: 1.3em;
       text-align: center;
     }
@@ -21,7 +21,7 @@
     justify-content: right;
     border-radius: 77.279px;
     margin-bottom: 20px;
-    @media #{$extra-small-screen}  {
+    @media #{responsive.$extra-small-screen}  {
       justify-content: center;
     }
   }

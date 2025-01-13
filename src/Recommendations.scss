@@ -1,9 +1,9 @@
-@import "responsive";
+@use "./responsive";
 
 .recom-content {
   text-align: center;
   h1 {
-    @media #{$extra-small-screen} {
+    @media #{responsive.$extra-small-screen} {
       font-size: 25px;
     }
   }
@@ -17,13 +17,13 @@
     .card {
       margin: 30px;
       width: 800px;
-      @media #{$extra-small-screen} {
+      @media #{responsive.$extra-small-screen} {
         margin: 10px;
       }
       .recom-card-head {
         p {
           font-size: 1.6em;
-          @media #{$extra-small-screen} {
+          @media #{responsive.$extra-small-screen} {
             font-size: 1.2em;
           }
         }
@@ -32,7 +32,7 @@
       .recom-card-footer {
         #text {
           font-size: 1.2em;
-          @media #{$extra-small-screen} {
+          @media #{responsive.$extra-small-screen} {
             font-size: 1em;
           }
         }

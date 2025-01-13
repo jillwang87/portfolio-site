@@ -1,4 +1,4 @@
-@import "responsive";
+@use "responsive";
 
 .skills-content {
   text-align: center;
@@ -13,13 +13,13 @@
     .card {
       margin: 30px;
       width: 400px;
-      @media #{$extra-small-screen} {
+      @media #{responsive.$extra-small-screen} {
         margin: 10px;
       }
       .skills-card-head {
         p {
           font-size: 1.7em;
-          @media #{$extra-small-screen} {
+          @media #{responsive.$extra-small-screen} {
             font-size: 1.5em;
           }
         }
@@ -28,7 +28,7 @@
       .skills-card-footer {
         #text {
           font-size: 1.2em;
-          @media #{$extra-small-screen} {
+          @media #{responsive.$extra-small-screen} {
             font-size: 1em;
           }
         }
