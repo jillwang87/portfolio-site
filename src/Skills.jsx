@@ -44,6 +44,8 @@ function Skills() {
           bottom={<CardFooter
             text={(
               <dl>
+                  <dt>MongoDB</dt>
+                  <dt>Hadoop</dt>
                   <dt>Impala</dt>
                   <dt>Hive</dt>
                   <dt>Oozie</dt>
@@ -63,10 +65,11 @@ function Skills() {
               />}
               makeFlip={false}/>
         <Card
-          head={<CardHeader title="Frontend Development" text="EntSoc at UW"/>}
+          head={<CardHeader title="Software Development" text="EntSoc at UW"/>}
           bottom={<CardFooter text={(
             <dl>
               <dt>JavaScript</dt>
+                <dt>TypeScript</dt>
               <dt>HTML</dt>
               <dt>CSS / SASS</dt>
               <dt>React</dt>

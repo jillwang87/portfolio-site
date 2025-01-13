@@ -109,7 +109,7 @@ const Content = () => {
           </div>
         </div>
         <Icons />
-        <p className="left-menu-footer"> &copy; 2021 Jill Yu Chieh Wang</p>
+        <p className="left-menu-footer"> &copy; 2025 Jill Yu Chieh Wang</p>
       </div>
       <div className="content-main">
         <div className="frame">

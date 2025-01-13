@@ -21,13 +21,13 @@ function Education () {
       </h3>
       <p>
         <dl>
-          <dt>Statistical Learning-Classification</dt>
-          <dt>Sampling and Experimental Design </dt>
-          <dt>Generalized Linear Models & Applications</dt>
-          <dt>Applied Probability</dt>
-          <dt>Data Visualization</dt>
-          <dt>Computational Statistics and Data Analysis</dt>
-          <dt>Mathematical Statistics </dt>
+          <dt>Statistical Learning-Classification (Python)</dt>
+          <dt>Sampling and Experimental Design (R)</dt>
+          <dt>Generalized Linear Models & Applications (R)</dt>
+          <dt>Applied Probability (R)</dt>
+          <dt>Data Visualization (R)</dt>
+          <dt>Computational Statistics and Data Analysis (MATLAB)</dt>
+          <dt>Mathematical Statistics (R)</dt>
         </dl>
       </p>
       <h3>
@@ -46,9 +46,9 @@ function Education () {
       </h3>
       <p>
         <dl>
-          <dt>Applied Cryptography  </dt>
-          <dt>Deterministic Operation Research Models  </dt>
-          <dt>Computational Methods for Differential Equations </dt>
+          <dt>Applied Cryptography</dt>
+          <dt>Deterministic Operation Research Models</dt>
+          <dt>Computational Methods for Differential Equations</dt>
         </dl>
       </p>
     </div>
