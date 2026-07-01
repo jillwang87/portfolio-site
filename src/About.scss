@@ -9,11 +9,13 @@
     font-size: 1.4em;
     @media #{responsive.$extra-small-screen}  {
       font-size: 1.3em;
-      text-align: center;
     }
     line-height: 2;
     text-align: left;
 
+    li {
+      margin-bottom: 0.5em;
+    }
   }
   img {
     float: right;

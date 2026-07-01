@@ -1,19 +1,8 @@
 import React from 'react';
 import Card from './components/Card';
+import CardHeader from './components/CardHeader';
+import CardFooter from './components/CardFooter';
 import './Recommendations.scss'
-
-const CardHeader = ({ title }) => (
-  <div className="recom-card-head">
-    <p>{title}</p>
-  </div>
-);
-
-const CardFooter = ({ text }) => (
-  <div className="recom-card-footer">
-    <p id="text">{text}</p>
-  </div>
-);
-
 
 function Recommendations() {
   return (
@@ -21,9 +10,9 @@ function Recommendations() {
       <h1>RECOMMENDATIONS</h1>
       <div className="recom-cards">
         <Card
-          head={<CardHeader title="Leon Wang (VP of Engineering at Graphen)"/>}
+          head={<CardHeader className="recom-card-head" label="Leon Wang (VP of Engineering at Graphen)"/>}
           bottom={
-            <CardFooter
+            <CardFooter className="recom-card-footer"
               text=" &ldquo; Jill has completed her 2019 summer intern in Graphen far beyond my expectation. Originally, we only
                expected she could do some of tedious tasks as a normal 3rd year college student, nevertheless, she helped
                us not only in frontend react coding, but also in machine learning modal training and suggestion ... [H]er
@@ -40,8 +29,8 @@ function Recommendations() {
           }
           makeFlip={false}/>
         <Card
-          head={<CardHeader title="Yun-Wei Chang (Software Developer at Graphen)"/>}
-          bottom={<CardFooter
+          head={<CardHeader className="recom-card-head" label="Yun-Wei Chang (Software Developer at Graphen)"/>}
+          bottom={<CardFooter className="recom-card-footer"
             text=" &ldquo;... I enjoyed working with Jill. She is very motivated and outspoken. During her
             internship, she was able to work independently and learn relevant technologies very quickly. She
              contributed to our React.js codebase immediately even though she came in halfway through...

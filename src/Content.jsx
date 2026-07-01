@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import classNames from 'classnames';
 import Icons from './components/Icons';
@@ -23,12 +23,20 @@ const rightCaret = (
   </svg>
 );
 
-const LeftMenuItem = ({ onClick, children, current }) => (
-  <Link className="left-menu-item" to={`/content/${children.toLowerCase()}`} replace onClick={onClick}>
-    { current === children.toLowerCase() && rightCaret }
-    <p>{children}</p>
-  </Link>
-);
+const LeftMenuItem = ({ onClick, children, current }) => {
+  const isActive = current === children.toLowerCase();
+  return (
+    <Link
+      className={classNames('left-menu-item', isActive && 'active')}
+      to={`/content/${children.toLowerCase()}`}
+      replace
+      onClick={onClick}
+    >
+      <p>{children}</p>
+      { isActive && rightCaret }
+    </Link>
+  );
+};
 
 const Content = () => {
   const lastContent = useRef('about');
@@ -37,6 +45,40 @@ const Content = () => {
   lastContent.current = current;
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const [bootKey, setBootKey] = useState(0);
+  const wasOnContentPage = useRef(false);
+  useEffect(() => {
+    if (onContentPage && !wasOnContentPage.current) {
+      setBootKey((key) => key + 1);
+    }
+    wasOnContentPage.current = !!onContentPage;
+  }, [onContentPage]);
+
+  const tabScrollRef = useRef(null);
+  const [tabScroll, setTabScroll] = useState({ atStart: true, atEnd: true });
+  const checkTabScroll = () => {
+    const el = tabScrollRef.current;
+    if (!el) return;
+    setTabScroll({
+      atStart: el.scrollLeft <= 2,
+      atEnd: el.scrollLeft + el.clientWidth >= el.scrollWidth - 2,
+    });
+  };
+  useEffect(() => {
+    const el = tabScrollRef.current;
+    if (!el) return;
+    checkTabScroll();
+    const nudgeTimeout = setTimeout(() => {
+      if (el.scrollWidth <= el.clientWidth + 2) return;
+      el.scrollTo({ left: 36, behavior: 'smooth' });
+      setTimeout(() => el.scrollTo({ left: 0, behavior: 'smooth' }), 450);
+    }, 700);
+    window.addEventListener('resize', checkTabScroll);
+    return () => {
+      clearTimeout(nudgeTimeout);
+      window.removeEventListener('resize', checkTabScroll);
+    };
+  }, [bootKey]);
   let content;
   switch (current) {
     case 'about':
@@ -92,28 +134,46 @@ const Content = () => {
         </button>
       )}
       <div className={classNames('overlay', menuOpen && 'visible')} onClick={closeMenu} />
-      <div className={classNames('left-menu', menuOpen && 'open')}>
-        <h2 className="left-menu-header">Jill Wang</h2>
-        <div className="hline" />
-        <div className="left-menu-list-container">
-          <div className="left-menu-list">
-            <LeftMenuItem current={current} onClick={closeMenu}>About</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Education</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Experience</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Skills</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Recommendations</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Projects</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Volunteering</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Awards</LeftMenuItem>
-            <LeftMenuItem current={current} onClick={closeMenu}>Resume</LeftMenuItem>
+      <div className="crt-screen">
+        <div key={bootKey} className="crt-boot-scan">
+          <div className="scan-band band-1" />
+          <div className="scan-band band-2" />
+          <div className="scan-band band-3" />
+          <div className="scan-band band-4" />
+          <div className="scan-band band-5" />
+        </div>
+        <div key={`menu-${bootKey}`} className={classNames('left-menu', 'screen-load-in', menuOpen && 'open')}>
+          <div className="left-menu-brand">
+            <h2 className="left-menu-header">Jill Wang</h2>
+            <p className="left-menu-tagline">Pip-Boy 3000 Mk IV — property of sole registered owner. Unauthorized use voids Vault-Tec warranty.</p>
+          </div>
+          <div className="hline" />
+          <div className="tab-scroll-wrap">
+            <div className="left-menu-list-container" ref={tabScrollRef} onScroll={checkTabScroll}>
+              <div className="left-menu-list">
+                <LeftMenuItem current={current} onClick={closeMenu}>About</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Experience</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Skills</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Education</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Recommendations</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Projects</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Volunteering</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Awards</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Resume</LeftMenuItem>
+              </div>
+            </div>
+            <span className={classNames('scroll-hint', 'scroll-hint-left', tabScroll.atStart && 'hidden')} aria-hidden="true">&lsaquo;</span>
+            <span className={classNames('scroll-hint', 'scroll-hint-right', tabScroll.atEnd && 'hidden')} aria-hidden="true">&rsaquo;</span>
           </div>
         </div>
-        <Icons />
-        <p className="left-menu-footer"> &copy; 2025 Jill Yu Chieh Wang</p>
-      </div>
-      <div className="content-main">
-        <div className="frame">
-          {content}
+        <div key={`main-${bootKey}`} className="content-main screen-load-in">
+          <div className="frame">
+            {content}
+          </div>
+        </div>
+        <div key={`status-${bootKey}`} className="status-bar screen-load-in">
+          <Icons />
+          <p className="left-menu-footer"> &copy; 2026 Jill Yu Chieh Wang</p>
         </div>
       </div>
     </div>

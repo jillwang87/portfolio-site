@@ -1,28 +1,14 @@
 import React from 'react';
 import entsocLogo from './images/entsoc-logo.png'
 import Card from './components/Card';
+import CardHeader from './components/CardHeader';
+import CardFooter from './components/CardFooter';
 import './Volunteering.scss'
 import velocityLogo from "./images/velocity-logo.jpeg"
 import SHLogo from "./images/SH-logo.png"
 import HTNLogo from "./images/HTN-logo.png"
 import TCLogo from "./images/TC-logo.png"
 import BCChildrenLogo from "./images/BC-children-logo.png"
-
-
-const CardHeader  = ({ src, alt, text, withText = false, withImage = true}) => (
-  <div className='volunteering-card-head'>
-    {withImage && <img src={src} alt={alt} />}
-    {withText && <p>{text}</p>}
-  </div>
-);
-
-const CardFooter = ({ text, subtext }) => (
-  <div className='volunteering-card-footer'>
-    <p id="text">{text}</p>
-    <p id="subtext">{subtext}</p>
-  </div>
-);
-
 
 function Volunteering () {
   return (
@@ -31,8 +17,8 @@ function Volunteering () {
       <p> I love volunteering for the purpose of education, entrepreneurship and health. </p>
       <div className="volunteering-cards">
         <Card
-          head={<CardHeader src={SHLogo} alt="StarterHacks Logo" withText={false} />}
-          bottom={<CardFooter text="Events Coordinator" subtext="Aug 2018 - Feb 2019" />}
+          head={<CardHeader className="volunteering-card-head" src={SHLogo} alt="StarterHacks Logo" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Events Coordinator" subtext="Aug 2018 - Feb 2019" />}
           makeFlip
         >
           <dl>
@@ -48,8 +34,8 @@ function Volunteering () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader src={velocityLogo} alt="Velocity Logo" withText={false} />}
-          bottom={<CardFooter text="Campus Ambassador" subtext="Sep 2018 - Dec 2018" />}
+          head={<CardHeader className="volunteering-card-head" src={velocityLogo} alt="Velocity Logo" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Campus Ambassador" subtext="Sep 2018 - Dec 2018" />}
           makeFlip
         >
           <dl className="volunteering-card-back">
@@ -62,20 +48,20 @@ function Volunteering () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader src={HTNLogo} alt="Hack the North Logo" withText={false}/>}
-          bottom={<CardFooter text="Volunteer" subtext="2017, 2018"/>}
+          head={<CardHeader className="volunteering-card-head" src={HTNLogo} alt="Hack the North Logo" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Volunteer" subtext="2017, 2018"/>}
         />
         <Card
-          head={<CardHeader src={TCLogo} alt="TZU CHI Logo" withText={false}/>}
-          bottom={<CardFooter text="Teaching Assistant" subtext="Sep 2013 - Jan 2016"/>}
+          head={<CardHeader className="volunteering-card-head" src={TCLogo} alt="TZU CHI Logo" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Teaching Assistant" subtext="Sep 2013 - Jan 2016"/>}
         />
         <Card
-          head={<CardHeader src={BCChildrenLogo} alt="BC Children Hospital Logo" withText={false}/>}
-          bottom={<CardFooter text="Fundraiser" subtext="Dec 2014 - Oct 2015"/>}
+          head={<CardHeader className="volunteering-card-head" src={BCChildrenLogo} alt="BC Children Hospital Logo" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Fundraiser" subtext="Dec 2014 - Oct 2015"/>}
         />
         <Card
-          head={<CardHeader text="Peer Tutoring" withText={true} withImage={false} />}
-          bottom={<CardFooter text="Science Class" subtext="High School Grade 11"/>}
+          head={<CardHeader className="volunteering-card-head" label="Peer Tutoring" />}
+          bottom={<CardFooter className="volunteering-card-footer" text="Science Class" subtext="High School Grade 11"/>}
         />
       </div>
     </div>

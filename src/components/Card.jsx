@@ -2,7 +2,7 @@ import React from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import useMobileDetect from 'use-mobile-detect-hook';
 
-function Card ({ head, bottom, children, makeFlip = false }) {
+function Card ({ head, bottom, summary, children, makeFlip = false }) {
   const device = useMobileDetect();
   return (
     <div className="card">
@@ -14,22 +14,23 @@ function Card ({ head, bottom, children, makeFlip = false }) {
       >
         <FrontSide
           animationDuration={300}
-          style={{ backgroundColor: '#FFFFFF'}}
+          style={{ backgroundColor: '#08150c', border: '1px solid rgba(157, 255, 176, 0.35)' }}
         >
           { head }
           <div className="hline"
           style={{
             height: '1px',
-            backgroundColor: '#808080',
+            backgroundColor: 'rgba(157, 255, 176, 0.35)',
             width: '100%',
             marginBottom: '12px',
             flexShrink: 0,
           }}/>
           { bottom }
+          { summary && <p className="card-summary">{summary}</p> }
         </FrontSide>
         <BackSide
           animationDuration={300}
-          style={{ backgroundColor: '#FFFFFF', overflowY: 'auto' }}>
+          style={{ backgroundColor: '#08150c', border: '1px solid rgba(157, 255, 176, 0.35)', overflowY: 'auto' }}>
           <div className="back">
             {children}
           </div>

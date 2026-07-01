@@ -1,4 +1,5 @@
 @use './responsive';
+@use './colors';
 
 
 .experience-content {
@@ -20,9 +21,22 @@
       margin: 10px;
     }
 
+    .flippy-container {
+      height: 100%;
+    }
+
+    .flippy-front,
+    .flippy-back {
+      overflow-y: auto;
+    }
+
     .experience-card-head {
       p {
         font-size: 1.8em;
+        min-height: 2.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media #{responsive.$extra-small-screen} {
           font-size: 1.5em;
         }
@@ -47,6 +61,14 @@
           font-size: 1.3em;
         }
       }
+    }
+
+    .card-summary {
+      font-size: 1em;
+      font-style: italic;
+      color: colors.$text-secondary;
+      padding: 0 20px;
+      margin-top: 8px;
     }
     .projects-card-back {
       dt {

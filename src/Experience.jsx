@@ -7,22 +7,9 @@ import taigaLogo from './images/taiga-logo.jpg'
 import markAnthonyLogo from './images/mark-anthony-group-logo.jpg'
 import truthifiLogo from './images/truthifi-logo.png'
 import Card from './components/Card';
+import CardHeader from './components/CardHeader';
+import CardFooter from './components/CardFooter';
 import './Experience.scss'
-
-const CardHeader  = ({ src, text }) => (
-  <div className='experience-card-head'>
-    <img src={src} />
-    <p>{text}</p>
-  </div>
-);
-
-const CardFooter = ({ text, subtext }) => (
-  <div className='experience-card-footer'>
-    <p id="text">{text}</p>
-    <p id="subtext">{subtext}</p>
-  </div>
-);
-
 
 function Experience () {
   return (
@@ -30,36 +17,41 @@ function Experience () {
       <h1>EXPERIENCE</h1>
       <div className="experience-cards">
         <Card
-            head={<CardHeader src={truthifiLogo} text="Truthifi" />}
-            bottom={<CardFooter text="Head of Analytics" subtext="Jul 2023 - Present" />}
+            head={<CardHeader className="experience-card-head" src={truthifiLogo} label="Truthifi" />}
+            bottom={<CardFooter className="experience-card-footer" text="Head of Analytics" subtext="Jul 2023 - Present" />}
+            summary="Built an internal agent/MCP server with 20+ tools connecting AI agents to real-time portfolio and market data"
             makeFlip
         >
           <dl className="experience-card-back">
             <dt>
-              - Integrated and blended data from APIs of vendors such as Xignite, Morningstar, Yahoo Finance,
-              public data from the government such as from the SEC, the Municipal Securities Rulemaking Board (MSRB) and custom web-scraped sources
+              - Built an internal agent/MCP server exposing 20+ tools that surface clients' portfolio and market data to AI agents, powering a complete financial health analysis experience
             </dt>
             <dt>
               - Designed advanced algorithms leveraging regex matching and natural language processing
               techniques to accurately reconcile securities across sources with inconsistent or incomplete unique identifiers
             </dt>
             <dt>
+              - Developed real-time performance feedback and diagnostic tools to benchmark investment portfolios against comprehensive market data
+            </dt>
+            <dt>
               - Engineered robust data-cleaning solutions to meticulously standardize, validate, and enhance the quality of market data, ensuring precision and reliability for downstream analysis
+            </dt>
+            <dt>
+              - Integrated and blended data from APIs of vendors such as Xignite, Morningstar, Yahoo Finance,
+              public data from the government such as from the SEC, the Municipal Securities Rulemaking Board (MSRB) and custom web-scraped sources
             </dt>
             <dt>
               - Collaborated cross-functionally with product and engineering teams to integrate data insights into a seamless customer platform experience
             </dt>
             <dt>
-              - Developed real-time performance feedback and diagnostic tools to benchmark investment portfolios against comprehensive market data
-            </dt>
-            <dt>
-              - Technology: TypeScript, MongoDB, AWS
+              - Technology: TypeScript, MongoDB, AWS, MCP
             </dt>
           </dl>
         </Card>
         <Card
-            head={<CardHeader src={markAnthonyLogo} text="Mark Anthony Group (via Adastra)" />}
-            bottom={<CardFooter text="Data Scientist" subtext="Mar 2023 - Jun 2023" />}
+            head={<CardHeader className="experience-card-head" src={markAnthonyLogo} label="Mark Anthony Group (via Adastra)" />}
+            bottom={<CardFooter className="experience-card-footer" text="Data Scientist" subtext="Mar 2023 - Jun 2023" />}
+            summary="Built an XGBoost sales-forecasting model on PySpark pipelines processing millions of rows to drive marketing decisions"
             makeFlip
         >
           <dl className="experience-card-back">
@@ -77,8 +69,9 @@ function Experience () {
           </dl>
         </Card>
         <Card
-            head={<CardHeader src={taigaLogo} text="Taiga Building Products Ltd. (via Adastra)" />}
-            bottom={<CardFooter text="Operation Research Analyst" subtext="Aug 2022 - Feb 2023" />}
+            head={<CardHeader className="experience-card-head" src={taigaLogo} label="Taiga Building Products Ltd. (via Adastra)" />}
+            bottom={<CardFooter className="experience-card-footer" text="Operation Research Analyst" subtext="Aug 2022 - Feb 2023" />}
+            summary="Combined a clustering AI model with mathematical optimization to cut freight costs and improve delivery routing"
             makeFlip
         >
           <dl className="experience-card-back">
@@ -97,8 +90,9 @@ function Experience () {
           </dl>
         </Card>
         <Card
-            head={<CardHeader src={tdLogo} text="TD (via Adastra)" />}
-            bottom={<CardFooter text="Data Analytics Developer" subtext="May 2021 - Jun 2022" />}
+            head={<CardHeader className="experience-card-head" src={tdLogo} label="TD (via Adastra)" />}
+            bottom={<CardFooter className="experience-card-footer" text="Data Analytics Developer" subtext="May 2021 - Jun 2022" />}
+            summary="Built an NLP-driven ML pipeline that automated security classification and retention decisions across a Hadoop-scale data lake"
             makeFlip
         >
           <dl className="experience-card-back">
@@ -122,8 +116,9 @@ function Experience () {
           </dl>
         </Card>
         <Card
-            head={<CardHeader src={adastraLogo} text="Adastra North America" />}
-            bottom={<CardFooter text="Data Science Consultant" subtext="Apr 2021 - Jun 2023" />}
+            head={<CardHeader className="experience-card-head" src={adastraLogo} label="Adastra North America" />}
+            bottom={<CardFooter className="experience-card-footer" text="Data Science Consultant" subtext="Apr 2021 - Jun 2023" />}
+            summary="Trained extensively in cloud ML architecture, delivering analytics and ML solutions across three enterprise clients"
             makeFlip
         >
           <dl className="experience-card-back">
@@ -136,8 +131,9 @@ function Experience () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader src={graphenLogo} text="Graphen" />}
-          bottom={<CardFooter text="Data Scientist & Software Developer" subtext="Jun 2019 - Aug 2019" />}
+          head={<CardHeader className="experience-card-head" src={graphenLogo} label="Graphen" />}
+          bottom={<CardFooter className="experience-card-footer" text="Data Scientist & Software Developer" subtext="Jun 2019 - Aug 2019" />}
+          summary="Built unsupervised and supervised ML models for financial anomaly detection, helping land a bank proof-of-concept"
           makeFlip={ true }
         >
           <dl className="experience-card-back">
@@ -166,8 +162,9 @@ function Experience () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader src={entsocLogo} text="EntSoc at UW" />}
-          bottom={<CardFooter text="Software Developer" subtext="Jan 2019 - Apr 2020" />}
+          head={<CardHeader className="experience-card-head" src={entsocLogo} label="EntSoc at UW" />}
+          bottom={<CardFooter className="experience-card-footer" text="Software Developer" subtext="Jan 2019 - Apr 2020" />}
+          summary="Rebuilt a static site into a fully responsive React web app alongside a UI/UX team"
           makeFlip={true}
         >
           <dl>

@@ -1,20 +1,8 @@
 import React from 'react';
 import Card from './components/Card';
+import CardHeader from './components/CardHeader';
+import CardFooter from './components/CardFooter';
 import './Projects.scss'
-
-const CardHeader  = ({ text }) => (
-  <div className='projects-card-head'>
-    <p>{text}</p>
-  </div>
-);
-
-const CardFooter = ({ text, subtext }) => (
-  <div className='projects-card-footer'>
-    <p id="text">{text}</p>
-    <p id="subtext">{subtext}</p>
-  </div>
-);
-
 
 function Projects () {
   return (
@@ -22,9 +10,9 @@ function Projects () {
       <h1>PROJECTS</h1>
       <div className="projects-cards">
         <Card
-          head={<CardHeader text="Spotify Music Analysis" />}
+          head={<CardHeader className="projects-card-head" label="Spotify Music Analysis" />}
           bottom={
-            <CardFooter
+            <CardFooter className="projects-card-footer"
               text="Use the Spotify Web API to retrieve my music streaming history features and analyze
                   my music taste. This project is still in development."
               subtext={
@@ -43,8 +31,8 @@ function Projects () {
           makeFlip={false}
         />
         <Card
-          head={<CardHeader text="Jewellery Shop Prediction"/>}
-          bottom={<CardFooter
+          head={<CardHeader className="projects-card-head" label="Jewellery Shop Prediction"/>}
+          bottom={<CardFooter className="projects-card-footer"
             text="Predicting whether an online jewellery shop visitor will purchase an item from
           the shop using XGBoost with 93.33% accuracy"
             subtext="p.s. I will upload my code after I have cleaned up my code"/>}
@@ -70,8 +58,8 @@ function Projects () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader text="Fashion MNIST" />}
-          bottom={<CardFooter
+          head={<CardHeader className="projects-card-head" label="Fashion MNIST" />}
+          bottom={<CardFooter className="projects-card-footer"
             text="Using Fashion MNIST dataset (fashion items images), achieved 94.73% accuracy
           with a CNN that ran within 20 minutes"
             subtext="p.s. I will upload my code after I have cleaned up my code"/>}
@@ -101,9 +89,9 @@ function Projects () {
           </dl>
         </Card>
         <Card
-          head={<CardHeader text="Python Cheatsheet Wiki" />}
+          head={<CardHeader className="projects-card-head" label="Python Cheatsheet Wiki" />}
           bottom={
-            <CardFooter
+            <CardFooter className="projects-card-footer"
               text="Journaling some useful code for all kinds of python data science projects that
           has helped me. Visit the wiki section of the repo to view the content."
               subtext={
@@ -121,9 +109,9 @@ function Projects () {
           makeFlip={false}
         />
         <Card
-          head={<CardHeader text="Portfolio Site" />}
+          head={<CardHeader className="projects-card-head" label="Portfolio Site" />}
           bottom={
-            <CardFooter
+            <CardFooter className="projects-card-footer"
               text="Thanks for visiting :)"
               subtext={
                 <>
