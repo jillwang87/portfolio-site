@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="screen">
+      <rect x="2" y="2" width="60" height="60" rx="10"/>
+    </clipPath>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#08150c"/>
+  <g clip-path="url(#screen)" opacity="0.5">
+    <rect y="10" width="64" height="3" fill="#52ff6e"/>
+    <rect y="22" width="64" height="3" fill="#52ff6e"/>
+    <rect y="34" width="64" height="3" fill="#52ff6e"/>
+    <rect y="46" width="64" height="3" fill="#52ff6e"/>
+    <rect y="58" width="64" height="3" fill="#52ff6e"/>
+  </g>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#52ff6e" stroke-width="2"/>
+  <text x="14" y="46" font-family="'Courier New', Courier, monospace" font-size="36" font-weight="bold" fill="#52ff6e" text-anchor="start">JW</text>
+  <rect x="49" y="26" width="9" height="20" fill="#52ff6e"/>
+</svg>
