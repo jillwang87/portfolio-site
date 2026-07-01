@@ -25,6 +25,18 @@ code {
     monospace;
 }
 
+a {
+  color: colors.$accent;
+
+  &:visited {
+    color: colors.$accent;
+  }
+
+  &:hover {
+    color: colors.$text-primary;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
