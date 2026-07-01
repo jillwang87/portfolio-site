@@ -84,7 +84,7 @@ function Skills() {
             <dl>
               <dt>Git</dt>
               <dt>Bash</dt>
-              <dt>C/ C++</dt>
+              <dt>C/C++</dt>
             </dl>
           )}
           />}
