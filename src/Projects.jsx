@@ -35,14 +35,15 @@ function Projects () {
           bottom={<CardFooter className="projects-card-footer"
             text="Predicting whether an online jewellery shop visitor will purchase an item from
           the shop using XGBoost with 93.33% accuracy"
-            subtext="p.s. I will upload my code after I have cleaned up my code"/>}
+            subtext={
+              <>
+                Kaggle Leaderboard:&nbsp;
+                <a href="https://www.kaggle.com/c/stat441datachallenge1/leaderboard" target="_blank">Link</a>
+              </>
+            }/>}
           makeFlip={true}
         >
           <dl className="projects-card-back">
-            <dt>
-              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge1/leaderboard"
-                                       target="_blank">Link</a>
-            </dt>
             <dt>
               - Use XGBoost on the highly imbalanced classification dataset
             </dt>
@@ -62,14 +63,15 @@ function Projects () {
           bottom={<CardFooter className="projects-card-footer"
             text="Using Fashion MNIST dataset (fashion items images), achieved 94.73% accuracy
           with a CNN that ran within 20 minutes"
-            subtext="p.s. I will upload my code after I have cleaned up my code"/>}
+            subtext={
+              <>
+                Kaggle Leaderboard:&nbsp;
+                <a href="https://www.kaggle.com/c/stat441datachallenge2/leaderboard" target="_blank">Link</a>
+              </>
+            }/>}
           makeFlip={ true }
         >
           <dl className="projects-card-back">
-            <dt>
-              - Kaggle Leaderboard: <a href="https://www.kaggle.com/c/stat441datachallenge2/leaderboard"
-                                       target="_blank">Link</a>
-            </dt>
             <dt>
               - Since Fashion MNIST images are heavily preprocessed, a small CNN can most likely outperform a deep net;
               hence, I built a small CNN using VGG16 as an inspiration. The CNN
@@ -117,11 +119,6 @@ function Projects () {
                 <>
                   <p>GitHub Repo:&nbsp;
                     <a href="https://github.com/jillwang87/portfolio-site"
-                       target="_blank">
-                      Link
-                    </a>
-                    , Figma Design:&nbsp;
-                    <a href="https://www.figma.com/file/17TM6aWfuknDyR2q8AB6lY/Portfolio-Site?node-id=12%3A341/"
                        target="_blank">
                       Link
                     </a>

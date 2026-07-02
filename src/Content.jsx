@@ -166,7 +166,7 @@ const Content = () => {
             <span className={classNames('scroll-hint', 'scroll-hint-right', tabScroll.atEnd && 'hidden')} aria-hidden="true">&rsaquo;</span>
           </div>
         </div>
-        <div key={`main-${bootKey}`} className="content-main screen-load-in">
+        <div key={`main-${bootKey}`} className={classNames('content-main', 'screen-load-in', current === 'resume' && 'no-overlay')}>
           <div className="frame">
             {content}
           </div>

@@ -436,6 +436,11 @@
     background-color: colors.$surface;
     color: colors.$text-primary;
 
+    &.no-overlay {
+      position: relative;
+      z-index: 7;
+    }
+
     @media #{responsive.$small-screen} {
       font-size: 15px;
     }

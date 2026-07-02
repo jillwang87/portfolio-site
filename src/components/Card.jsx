@@ -27,6 +27,7 @@ function Card ({ head, bottom, summary, children, makeFlip = false }) {
           }}/>
           { bottom }
           { summary && <p className="card-summary">{summary}</p> }
+          { makeFlip && device.isMobile() && <span className="card-flip-hint">&#8635; tap to flip</span> }
         </FrontSide>
         <BackSide
           animationDuration={300}

@@ -70,6 +70,29 @@
       padding: 0 20px;
       margin-top: 8px;
     }
+
+    .card-flip-hint {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 0.65em;
+      letter-spacing: 0.04em;
+      color: colors.$accent;
+      border: 1px solid rgba(157, 255, 176, 0.4);
+      border-radius: 20px;
+      padding: 4px 10px;
+      background-color: rgba(157, 255, 176, 0.06);
+      animation: card-flip-hint-pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes card-flip-hint-pulse {
+      0%, 100% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
     .projects-card-back {
       dt {
         #bold {
