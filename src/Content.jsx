@@ -155,11 +155,11 @@ const Content = () => {
                 <LeftMenuItem current={current} onClick={closeMenu}>Experience</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Skills</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Education</LeftMenuItem>
+                <LeftMenuItem current={current} onClick={closeMenu}>Resume</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Recommendations</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Projects</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Volunteering</LeftMenuItem>
                 <LeftMenuItem current={current} onClick={closeMenu}>Awards</LeftMenuItem>
-                <LeftMenuItem current={current} onClick={closeMenu}>Resume</LeftMenuItem>
               </div>
             </div>
             <span className={classNames('scroll-hint', 'scroll-hint-left', tabScroll.atStart && 'hidden')} aria-hidden="true">&lsaquo;</span>

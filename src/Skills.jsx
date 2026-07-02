@@ -42,6 +42,19 @@ function Skills() {
               />}
               makeFlip={false}/>
         <Card
+          head={<CardHeader className="skills-card-head" label="Software Development"/>}
+          bottom={<CardFooter className="skills-card-footer" text={(
+            <dl>
+              <dt>TypeScript</dt>
+              <dt>Node.js</dt>
+              <dt>NestJS</dt>
+              <dt>React</dt>
+              <dt>JavaScript</dt>
+            </dl>
+          )}
+          />}
+          makeFlip={false}/>
+        <Card
           head={<CardHeader className="skills-card-head" label="ETL"/>}
           bottom={<CardFooter className="skills-card-footer"
             text={(
@@ -67,17 +80,6 @@ function Skills() {
                   )}
               />}
               makeFlip={false}/>
-        <Card
-          head={<CardHeader className="skills-card-head" label="Software Development"/>}
-          bottom={<CardFooter className="skills-card-footer" text={(
-            <dl>
-              <dt>TypeScript</dt>
-              <dt>React</dt>
-              <dt>JavaScript</dt>
-            </dl>
-          )}
-          />}
-          makeFlip={false}/>
         <Card
           head={<CardHeader className="skills-card-head" label="Others"/>}
           bottom={<CardFooter className="skills-card-footer" text={(
