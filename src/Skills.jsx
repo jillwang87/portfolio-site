@@ -50,6 +50,7 @@ function Skills() {
               <dt>NestJS</dt>
               <dt>React</dt>
               <dt>JavaScript</dt>
+              <dt>GraphQL</dt>
             </dl>
           )}
           />}

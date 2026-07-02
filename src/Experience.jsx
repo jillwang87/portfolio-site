@@ -45,7 +45,7 @@ function Experience () {
               - Designed advanced algorithms leveraging regex matching and NLP techniques to accurately reconcile securities across sources with inconsistent or incomplete unique identifiers
             </dt>
             <dt>
-              - Technology: TypeScript, MongoDB, MCP, React, Node.js, NestJS
+              - Technology: TypeScript, MongoDB, MCP, React, Node.js, NestJS, GraphQL
             </dt>
           </dl>
         </Card>
