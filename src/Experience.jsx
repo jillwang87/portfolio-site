@@ -24,27 +24,28 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built an internal agent/MCP server exposing 20+ tools that surface clients' portfolio and market data to AI agents, powering a complete financial health analysis experience
+              - Built and shipped 20+ MCP tools serving an internal AI agent and external third-party MCP clients, powering a complete, customizable financial health analysis experience
             </dt>
             <dt>
-              - Designed advanced algorithms leveraging regex matching and natural language processing
-              techniques to accurately reconcile securities across sources with inconsistent or incomplete unique identifiers
+              - Engineered prompt safety guardrails for the internal agent, rich metadata contracts for third-party MCP clients, user-friendly tool inputs, and MongoDB-backed pagination to optimize query load for large result sets
             </dt>
             <dt>
-              - Developed real-time performance feedback and diagnostic tools to benchmark investment portfolios against comprehensive market data
+              - Shipped directive MCP tools and tier-based upgrade nudges that drove account-linking conversion, subscription growth, and rising assets under monitoring
             </dt>
             <dt>
-              - Engineered robust data-cleaning solutions to meticulously standardize, validate, and enhance the quality of market data, ensuring precision and reliability for downstream analysis
+              - Built PostHog dashboards and SQL-driven funnel analyses across the public site and core app to pinpoint signup and account-linking drop-off and drive fixes
             </dt>
             <dt>
-              - Integrated and blended data from APIs of vendors such as Xignite, Morningstar, Yahoo Finance,
-              public data from the government such as from the SEC, the Municipal Securities Rulemaking Board (MSRB) and custom web-scraped sources
+              - Built efficient ETL pipelines for vendor APIs (Xignite, Morningstar, Yahoo Finance) and government sources (SEC, MSRB) that meticulously standardize, validate, and enhance millions of records
             </dt>
             <dt>
-              - Collaborated cross-functionally with product and engineering teams to integrate data insights into a seamless customer platform experience
+              - Developed real-time performance feedback and diagnostic metrics to benchmark users' investment portfolios
             </dt>
             <dt>
-              - Technology: TypeScript, MongoDB, AWS, MCP
+              - Designed advanced algorithms leveraging regex matching and NLP techniques to accurately reconcile securities across sources with inconsistent or incomplete unique identifiers
+            </dt>
+            <dt>
+              - Technology: TypeScript, MongoDB, MCP, React, Node.js, NestJS
             </dt>
           </dl>
         </Card>
@@ -56,12 +57,8 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built a sales forecasting Machine Learning (ML) model for the purpose of a gap and attention
-              marketing analysis (Gap: identify products that are not sold in a store, but should be sold;
-              Attention: identify products that are not selling well and require attention)
-            </dt>
-            <dt>
-              - Utilize PySpark to build ML pipelines to process millions of rows of data
+              - Built an XGBoost sales-forecasting ML model on PySpark pipelines processing millions of rows to power gap and attention marketing analysis
+              (Gap: products not sold in a store but that should be; Attention: products selling poorly that need attention)
             </dt>
             <dt>
               - Technology: Python, AWS SageMaker, XGBRegressor, SQL
@@ -76,13 +73,10 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built a system to optimize distribution routes and truck-loads, reducing freight costs and improving sales margins
+              - Built an address-clustering AI model (Google Direction API) to optimize delivery routing
             </dt>
             <dt>
-              - Built an address-clustering algorithm to cluster customers' geographic locations and optimize delivery routes using a clustering AI model and Google Direction API
-            </dt>
-            <dt>
-              - Built a truck-load optimization model by mathematical formulation using Google OR
+              - Built a truck-load optimization model by mathematical formulation (Google OR-Tools) — together reducing freight costs and improving sales margins
             </dt>
             <dt>
               - Technology: Python, Azure ML, Google OR-Tools, Google Direction API
@@ -97,21 +91,16 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built a Python-based data lifecycle management (DLM) application
-              that uses Computational Linguistics and Natural Language Processing (NLP)
-              to extract features for a machine learning pipeline which predicts security classifications
-              and retention periods
+              - Built a Python NLP/ML pipeline (data lifecycle management application) using computational linguistics and NLP to extract features that predict security classifications and retention periods — delivering predictions in minutes that previously took months of manual work from data stewards
             </dt>
             <dt>
-              - Built a user-friendly interface with tkinter for business users to provide a location
-              (either local files or a Hadoop database) to scan and automatically run the ML pipeline,
-              emitting the predictions in an Excel file
+              - Built ETL pipelines on the Apache big data ecosystem feeding real-time data into 50+ interactive Tableau executive dashboards, engineering custom formulas for the underlying calculations
             </dt>
             <dt>
-              - ETL from Hadoop using Impala and developing Tableau dashboards to present insights to business executives
+              - Built a user-friendly tkinter interface for business users to point the pipeline at local files or a Hadoop database and get predictions back as an Excel file
             </dt>
             <dt>
-              - Technology: Impala, Python, scikit-learn, NLP, tkinter, spaCy, Tableau, Oozie
+              - Technology: Impala, Python, scikit-learn, NLP, spaCy, tkinter, Tableau, Oozie
             </dt>
           </dl>
         </Card>
@@ -123,10 +112,7 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Extensive training in leveraging cloud platforms to design and implement scalable analytics and machine learning solutions
-            </dt>
-            <dt>
-              - Assigned to TD Bank, Taiga Building Products Ltd. and Mark Anthony Group
+              - Delivered scalable analytics and machine learning solutions across enterprise engagements at TD Bank, Taiga Building Products Ltd., and Mark Anthony Group
             </dt>
           </dl>
         </Card>
@@ -138,26 +124,16 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Developed an unsupervised Holt Winter model on time series data and a supervised XGBoost model
-              on multivariate data, both for the purpose of performing financial behaviour anomaly detection
+              - Developed an unsupervised model on time-series data and a supervised model on multivariate data for financial behaviour anomaly/fraud detection, applying statistical methods to design a systematic risk (anomaly) score and a numerical analysis method (power spectral density) to improve time series model accuracy
             </dt>
             <dt>
-              - Applied statistical methods to design a systematic way to calculate a risk (anomaly) score
+              - Advised company leadership on strategies to combine the company's core graph-database product with machine learning models, helping land a proof-of-concept project with one of the largest banks in Taiwan
             </dt>
             <dt>
-              - Applied a numerical analysis method (power spectral density) to improve the accuracy of a time series model
+              - Developed the front end of a React-based anti-money-laundering platform
             </dt>
             <dt>
-              - Advised company leadership on strategies to combine the company's core product, a fast and
-              efficient graph database, with machine learning models that helped land a proof-of-concept project
-              with one of the largest banks in Taiwan
-            </dt>
-            <dt>
-              - Developed the frontend of a React-based anti-money-laundering platform
-            </dt>
-            <dt>
-              - Technologies: Python, Numpy, Pandas, scikit-learn, XGBoost, Git, JavaScript, React,
-              GraphQL, ElasticSearch, SASS, CSS
+              - Technology: Python, NumPy, pandas, scikit-learn, XGBoost, JavaScript, React
             </dt>
           </dl>
         </Card>
