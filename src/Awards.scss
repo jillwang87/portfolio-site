@@ -32,10 +32,23 @@
     .awards-card-footer {
       #text {
         font-size: 1.5em;
+        text-align: left;
         @media #{responsive.$extra-small-screen} {
           font-size: 1em;
         }
 
+        ul {
+          margin: 0;
+          padding-left: 1.2em;
+
+          li {
+            margin-bottom: 8px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
       }
       img {
         width: 400px;

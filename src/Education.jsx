@@ -51,6 +51,16 @@ function Education () {
           <dt>Computational Methods for Differential Equations</dt>
         </dl>
       </p>
+      <h2>
+        Awards:
+      </h2>
+      <p>
+        <dl>
+          <dt>Term Dean’s Honours List — Spring 2020 with term average 91.00%</dt>
+          <dt>Term Distinction — Fall 2020 with term average 86.33%, Winter 2020 with term average 83.00%</dt>
+          <dt>President’s Scholarship 2017 — Awarded upon entrance to the University of Waterloo to students with high school average 90-94.9%</dt>
+        </dl>
+      </p>
     </div>
   );
 }

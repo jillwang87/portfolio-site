@@ -101,6 +101,20 @@
       }
     }
 
+    .flippy-back {
+      .back {
+        text-align: left;
+
+        dt {
+          margin-bottom: 12px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
 
   }
 }

@@ -137,7 +137,7 @@ function Experience () {
             </dt>
           </dl>
         </Card>
-        <Card
+        {/* <Card
           head={<CardHeader className="experience-card-head" src={entsocLogo} label="EntSoc at UW" />}
           bottom={<CardFooter className="experience-card-footer" text="Software Developer" subtext="Jan 2019 - Apr 2020" />}
           summary="Rebuilt a static site into a fully responsive React web app alongside a UI/UX team"
@@ -154,7 +154,7 @@ function Experience () {
               - Technologies: JavaScript, React, SASS, CSS3, Git
             </dt>
           </dl>
-        </Card>
+        </Card> */}
       </div>
     </div>
 

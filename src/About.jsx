@@ -9,23 +9,24 @@ function About () {
           <h2>
               Work Experience
           </h2>
-          <p> &emsp; With over five years of experience in the data field, I have worked across
-              diverse roles and environments, particularly in startups and R&D divisions.
+          <p> &emsp; With over five years of experience in data science and engineering, I have worked across
+              diverse roles and environments, particularly in startups and R&D divisions, where I've moved fluidly
+              between individual contributor and lead project handler depending on what each project called for.
               These settings have honed my ability to quickly adapt to new technologies and skills.
               My professional journey spans roles such as:
               <ul>
-                  <li>Data Engineer: Building data architectures and managing ETL pipelines, including data cleaning
-                      and validation, to enable downstream analytical and ML workflows.
+                  <li>AI Solutions Architect / MCP Developer: Designing chatbot architectures and MCP ecosystems,
+                      including prompt engineering, tool design, and integrations between LLMs and external systems.
+                  </li>
+                  <li>Machine Learning Engineer: Designing and implementing ML pipelines to leverage large
+                      datasets for predictive and classification models.
                   </li>
                   <li>Data Analyst / Product Analytics: Extracting actionable insights using BI tools like Tableau and
                       PostHog, building dashboards to track product metrics, spot issues, and drive fixes alongside
                       the product team.
                   </li>
-                  <li>Machine Learning Engineer: Designing and implementing ML pipelines to leverage large
-                      datasets for predictive and classification models.
-                  </li>
-                  <li>AI Solutions Architect / MCP Developer: Designing chatbot architectures and MCP ecosystems,
-                      including prompt engineering, tool design, and integrations between LLMs and external systems.
+                  <li>Data Engineer: Building data architectures and managing ETL pipelines, including data cleaning
+                      and validation, to enable downstream analytical and ML workflows.
                   </li>
               </ul>
               &emsp; I approach engineering by thinking through problems thoroughly and planning before I build,
@@ -39,8 +40,8 @@ function About () {
           <p>
               &emsp; This rigor traces back to my dual degrees in Computational Mathematics and Statistics from the
               University of Waterloo, spanning Mathematical Optimization, Numerical Analysis, and Applied Statistics
-              on one side, and Data Structures, Algorithmic Problem-Solving, Databases, and Object-Oriented
-              Programming on the other. One side taught me to reason carefully and build arguments step by step; the
+              on one track, and Data Structures, Algorithmic Problem-Solving, Databases, and Object-Oriented
+              Programming on the other. One track taught me to reason carefully and build arguments step by step; the
               other taught me to structure systems around clear, reusable patterns. Together, they shape how I plan,
               reason through, and structure every engineering decision.
           </p>
