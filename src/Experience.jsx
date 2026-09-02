@@ -19,33 +19,39 @@ function Experience () {
         <Card
             head={<CardHeader className="experience-card-head" src={truthifiLogo} label="Truthifi" />}
             bottom={<CardFooter className="experience-card-footer" text="Head of Analytics" subtext="Jul 2023 - Present" />}
-            summary="Built an internal agent/MCP server with 20+ tools connecting AI agents to real-time portfolio and market data"
+            summary="Built an internal agent/MCP server with 25+ tools connecting AI agents to real-time portfolio and market data"
             makeFlip
         >
           <dl className="experience-card-back">
             <dt>
-              - Built and shipped 20+ MCP tools serving an internal AI agent and external third-party MCP clients, powering a complete, customizable financial health analysis experience
+              - Built and shipped 25+ MCP tools serving an internal AI agent and external third-party MCP clients, powering a complete, customizable financial health analysis experience
             </dt>
             <dt>
-              - Engineered prompt safety guardrails for the internal agent, rich metadata contracts for third-party MCP clients, user-friendly tool inputs, and MongoDB-backed pagination to optimize query load for large result sets
+              - Built rich metadata contracts for third-party MCP clients, user-friendly tool inputs, MongoDB-backed pagination to optimize query load for large result sets, and MongoDB-backed vector search for answering help questions
+            </dt>
+            <dt>
+              - Built and shipped a browsable prompt catalog that surfaces curated financial analysis workflows to users
+            </dt>
+            <dt>
+              - Engineered an LLM application with LangGraph to build a custom agent workflow, and produced prompt safety guardrails
             </dt>
             <dt>
               - Shipped directive MCP tools and tier-based upgrade nudges that drove account-linking conversion, subscription growth, and rising assets under monitoring
             </dt>
             <dt>
-              - Built PostHog dashboards and SQL-driven funnel analyses across the public site and core app to pinpoint signup and account-linking drop-off and drive fixes
+              - Unified the upgrade experience across subscription tiers, combining PostHog hooks, React hooks, and IntersectionObserver to register impressions versus clicks on upgrade call-to-action components, giving accurate engagement analytics
             </dt>
             <dt>
-              - Built efficient ETL pipelines for vendor APIs (Xignite, Morningstar, Yahoo Finance) and government sources (SEC, MSRB) that meticulously standardize, validate, and enhance millions of records
+              - Built SQL-driven PostHog dashboards and funnel analyses for the marketing public site, core web app, MCP server, and internal agent
             </dt>
             <dt>
-              - Developed real-time performance feedback and diagnostic metrics to benchmark users' investment portfolios
+              - Built efficient ETL pipelines for vendor APIs (Xignite, Morningstar, Yahoo Finance) and government sources (SEC, MSRB) that meticulously standardize, validate, and enhance millions of records to maintain the quality of the securities master database
             </dt>
             <dt>
-              - Designed advanced algorithms leveraging regex matching and NLP techniques to accurately reconcile securities across sources with inconsistent or incomplete unique identifiers
+              - Developed real-time performance feedback and diagnostic metrics, portfolio composition breakdown, and benchmarks for users' investment portfolios
             </dt>
             <dt>
-              - Technology: TypeScript, MongoDB, MCP, React, Node.js, NestJS, GraphQL
+              - Technology: TypeScript, MongoDB, Model Context Protocol (MCP), React, LangChain, Node.js, NestJS, GraphQL
             </dt>
           </dl>
         </Card>
@@ -57,11 +63,11 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built an XGBoost sales-forecasting ML model on PySpark pipelines processing millions of rows to power gap and attention marketing analysis
+              - Built an XGBRegressor sales-forecasting ML model on PySpark pipelines processing millions of rows to power gap and attention marketing analysis
               (Gap: products not sold in a store but that should be; Attention: products selling poorly that need attention)
             </dt>
             <dt>
-              - Technology: Python, AWS SageMaker, XGBRegressor, SQL
+              - Technology: Python, AWS SageMaker, XGBoost, SQL
             </dt>
           </dl>
         </Card>
@@ -76,7 +82,7 @@ function Experience () {
               - Built an address-clustering AI model (Google Direction API) to optimize delivery routing
             </dt>
             <dt>
-              - Built a truck-load optimization model by mathematical formulation (Google OR-Tools) — together reducing freight costs and improving sales margins
+              - Built a truck-load optimization model by mathematical formulation (Google OR-Tools Linear Programming) — together reducing freight costs and improving sales margins
             </dt>
             <dt>
               - Technology: Python, Azure ML, Google OR-Tools, Google Direction API
@@ -91,16 +97,22 @@ function Experience () {
         >
           <dl className="experience-card-back">
             <dt>
-              - Built a Python NLP/ML pipeline (data lifecycle management application) using computational linguistics and NLP to extract features that predict security classifications and retention periods — delivering predictions in minutes that previously took months of manual work from data stewards
+              - Owned the end-to-end data science lifecycle for a security classification &amp; retention-period prediction model (data lifecycle management application), partnering with data stewards to gather and validate training data across company digital assets
             </dt>
             <dt>
-              - Built ETL pipelines on the Apache big data ecosystem feeding real-time data into 50+ interactive Tableau executive dashboards, engineering custom formulas for the underlying calculations
+              - Engineered text features using vector embeddings and NLP techniques to capture semantic signals from document content, cleaned and consolidated additional structured features, then applied Principal Component Analysis (PCA) to denoise the combined feature set before training
+            </dt>
+            <dt>
+              - Trained and tuned an XGBClassifier with Hyperopt to predict security classifications and retention periods, delivering predictions in minutes that previously took months of manual work from data stewards
+            </dt>
+            <dt>
+              - Built ETL pipelines on the Apache big data ecosystem feeding real-time data straight from source systems into 50+ interactive Tableau executive dashboards, engineering custom formulas to handle the underlying calculations
             </dt>
             <dt>
               - Built a user-friendly tkinter interface for business users to point the pipeline at local files or a Hadoop database and get predictions back as an Excel file
             </dt>
             <dt>
-              - Technology: Impala, Python, scikit-learn, NLP, spaCy, tkinter, Tableau, Oozie
+              - Technology: Impala, Python, scikit-learn, XGBoost, Hyperopt, PCA, NLP, spaCy, tkinter, Tableau, Oozie
             </dt>
           </dl>
         </Card>
